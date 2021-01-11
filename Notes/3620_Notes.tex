@@ -1,0 +1,1165 @@
+\documentclass[12pt, openany, letterpaper]{memoir}
+\usepackage{NotesStyle}
+\renewcommand\thesection{\thechapter\Alph{section}}
+\renewcommand\thesubsection{\thesection.\Numeral{subsection}}
+
+
+\begin{document}
+\title{CHEM 3620 Lecture Notes}
+\author{Matthew Rowley}
+\date{\today}
+\mainmatter
+\maketitle
+\chapter*{Textbook Errata}
+\section*{Chapter 1}
+\begin{itemize}
+	\item p. 42 -- In Brief illustration 1B.2 the $v_{rms}$ is used where $v_{mean}$ should be
+	\item p. 46 -- $Z = \dfrac{RT}{pV_m^\circ}$ in the paragraph between equations 1C.1 and 1C.2 is wrong. The expression for the molar volume of an ideal gas was erroneously substituted into the real gas molar volume
+\end{itemize}
+\section*{Chapter 2}
+\begin{itemize}
+	\item p.86 -- Equations 2C.6 and 2C.7a both should have ``\ldots$=H(T_1)$\ldots''  instead of ``\ldots$=H(T_2)$\ldots''
+\end{itemize}
+\section*{Chapter 5}
+\begin{itemize}
+	\item p.203 -- Equation 5C.4 should be: $y_A = \dfrac{\chi_Ap^\star_A}{p^\star_B+\left(p^\star_A-p^\star_B\right)\chi_A} = 1-y_B$
+\end{itemize}
+\section*{Chapter 7}
+\begin{itemize}
+	\item p. 295 and 296 -- The infinitesimals in the normalization integrals should be reversed to “$\mathrm{d}\phi\mathrm{d}\theta\mathrm{d}r$”
+\end{itemize}
+\section*{Chapter 9}
+\begin{itemize}
+	\item p. 388 -- The bottom row of the table of j values should be $\frac{1}{2}$ for both electrons
+\end{itemize}
+\section*{Chapter 10}
+\begin{itemize}
+	\item p. 423 -- The second secular equation (10D.5b) should have $\alpha_B$, not $\alpha_A$
+\end{itemize}
+
+
+\setcounter{chapter}{6}
+\chapter{Introduction to Quantum Theory}
+\section{The Origins of Quantum Mechanics}
+\begin{itemize}
+	\item Classical theories relied on two particular ideas that were changed by quantum mechanics:
+	\begin{itemize}
+		\item The precise position, momentum, and other properties of a particle can be known
+		\item Energetic modes can hold any amount of energy, large or small.
+	\end{itemize}
+	\item We will cover several experiments from the 19th to 20th century that lead to quantum mechanics
+	\item Black-body radiation and the ultraviolet catastrophe:
+	\begin{itemize}
+		\item Hot objects emit light of all wavelengths
+		\item Physicists modeled this behavior as a network of oscillations, predicting radiation according to the Rayleigh-Jeans law: $\rho(\lambda,T)=\dfrac{8\pi k_BT}{\lambda^4}$
+		\item This law predicted infinite light intensity as wavelengths approached 0
+		\item Real black-body curves taper off at high frequencies (Blackbody figure)
+		\item In 1990 Max Planck proposed that light can only be emitted in quantized amounts of energy, depending on the wavelength
+		\item This is where we get $E=h\nu=\dfrac{hc}{\lambda}$
+		\item In the first application of statistical mechanics, Planck used his idea of quantized energy to derive the Planck distribution: $\rho(\lambda, T)=\dfrac{8\pi hc}{\lambda^5\left(e^{\nicefrac{hc}{\lambda k_BT}}-1\right)}$
+		\item At long wavelengths, the exponential portion goes away and reproduces the Rayleigh-Jeans law. At short wavelengths the exponential portion causes $\rho$ to approach 0
+		\item Planck's distribution matched observations closely		
+	\end{itemize}
+	\item Heat capacities:
+	\begin{itemize}
+		\item Heat capacities of solids were measured and found to follow a simple rule: $C_{V,m} = 3R$
+		\item This matched well with a model of solid particles distributing energy equally into vibrations in three dimensions
+		\item As measurements were made at lower and lower temperatures, the observed behavior deviated significantly from this model
+		\item Again, Planck's idea of quantized energy and statistical mechanics were brought to bear. Einstein was cutting his teeth on this problem
+		\item The result was the Einstein formula:
+		
+		$C_{V,m}=3R\left(\dfrac{\theta_E}{T}\right)^2\left(\dfrac{e^{\nicefrac{\theta_E}{2T}}}{e^{\nicefrac{\theta_E}{T}}-1}\right)^2 \hspace{2em} \theta_E=\dfrac{h\nu}{k_B}=\dfrac{hc}{\lambda k_B}$
+		\item At high temperatures this equation again collapses to the classical result
+		\item At lower temperatures the heat capacity approaches 0
+		\item The Einstein formula was later improved by Debye, but it is correct in the essential observation that vibrational energy comes in discrete amounts rather than a continuum
+	\end{itemize}
+	\item Atomic spectra:
+	\begin{itemize}
+		\item Atoms and molecules emit light when they are excited energetically, different from blackbody radiation
+		\item The light emitted always had a very narrow, precise wavelength
+		\item Bohr realized that atoms and molecules have discrete energy states, and light is emitted according to changes in energy states where $\Delta E = h\nu$
+	\end{itemize}
+	\item These experiments and their resolutions showed that energy is quantized -- both in the matter energy states and in light emitted or absorbed
+	\item The photoelectric effect:
+	\begin{itemize}
+		\item Certain metals will emit an electron when they are exposed to light
+		\item Even low intensities of very blue light will eject electrons with large kinetic energy
+		\item Even high intensities of very red light will not eject any electrons at all
+		\item If we follow Planck's $E=h\nu$, then the kinetic energy of the electron is: $E_k = h\nu - \phi$ for all wavelengths
+		\item $\phi$ is the work function, and represents the energy required to remove an electron from the metal
+		\item This experiment shows that light is always carried in discrete units of energy
+	\end{itemize}
+	\item Matter wave diffraction:
+	\begin{itemize}
+		\item Waves of all kinds diffract - water waves, light waves, etc.
+		\item Diffraction of light stands in contrast to the photoelectric effect, together demonstrating wave/particle duality of light
+		\item In 1924 Luis de Broglie postulated that since light has momentum, perhaps moving things have a characteristic wavelength
+		\item He proposed his eponymous relation: $\lambda = \dfrac{h}{p}=\dfrac{h}{mv}$
+		\item de Broglie was not taken seriously at first, but in 1925 Davisson and Germer observed wave-like behavior in matter (specifically, electrons)
+		\item Davisson and Germer send a beam of electrons toward a crystal of Nickel metal and observed several orders of diffraction of the deflected electrons
+		\item Find the wavelength of an electron travelling at 1\% of the speed of light, verses your own wavelength jogging at 8 miles per hour
+		\item Atomic corral and standing electron waves
+	\end{itemize}
+	\item These two experiments show wave/particle duality in both particles and photons
+\end{itemize}
+\section{Dynamics of Microscopic Systems}
+\begin{itemize}
+	\item The wavelike nature of matter was further explored in 1926 by Erwin Schr\"odinger
+	\item The Schr\"odinger equation is a complete description of any quantum mechanical system:
+	\begin{itemize}
+		\item This equation can be inferred by combining Maxwell's equations for electromagnetic radiation with de Broglie's relation for the wavelength of matter waves, but is not directly derived from them
+		\item $-\dfrac{\hbar^2}{2m}\dfrac{\mathrm{d}^2\psi}{\mathrm{d}x^2} + V(x)\psi=E\psi$ ~ ~ (at least, in one-dimension)
+		\item $\psi$ is the wavefunction, and it is a complex time-dependent mathematical function
+		\item $V(x)$ is the potential function, taking different forms depending on the fields affecting a quantum system
+		\item Taken as a whole, this equation is a \emph{differential} equation and has many solutions
+		Table 7B.1 shows many forms of the Schr\"odinger equation (time-dependent, 3-dimensional, etc.)
+	\end{itemize}
+	\item The Schr\"odinger equation is just that -- a mathematical equation. We trust its results (predicting position, energy levels, momenta, etc. of ensembles) because it works, just like everything else in science!
+	\item Nevertheless, we always try to interpret the laws of science in intuitive terms
+	\item The Born interpretation of the wavefunction states that the probability of a particle being found at particular location is: $p\propto\abs{\psi}^2$
+	\item Figure 7B.3 shows a wavefunction and corresponding probability distribution function
+	\item Points where $\abs{\psi}^2=0$ are called “nodes”
+	\item de Broglie espoused a different view, called pilot wave theory, which we will not be covering much but I will mention again when we dissect the interpretation of a phenomenon called superposition
+	\item Because $p\propto\abs{\psi}^2$, and the probability of finding a particle in all of space must be 1, we know that $N^2\displaystyle\int\psi^*\psi\mathrm{d}\tau=1$	
+	\item $N$ is called a normalization constant, and scales the wavefunction so that its probabilities make physical sense
+	\item From now on, we will treat the normalization constant as an integral part of $\psi$
+	\item When integrating over all space, we must consider the coordinate system:
+	\begin{itemize}
+		\item For cartesian coordinates: $\displaystyle\int_{-\infty}^{\infty}\displaystyle\int_{-\infty}^{\infty}\displaystyle\int_{-\infty}^{\infty}\psi^{*}\psi\mathrm{d}x\mathrm{d}y\mathrm{d}z=1$
+		\item For spherical polar coordinates, $\theta$ is the angle with the $z$-axis and $\phi$ is the angle with the $x$-axis after projection on the $x$-$y$ plane. This is opposite to how mathematicians define $\theta$ and $\phi$
+		\item In spherical polar coordinates:$\displaystyle\int_{0}^{\infty}\displaystyle\int_{0}^{\pi}\displaystyle\int_{0}^{2\pi}\psi^{*}\psi r^2\sin\theta\mathrm{d}\phi\mathrm{d}\theta\mathrm{d}r=1$
+		\item Note that the order of the infinitesimals is incorrect in the book
+	\end{itemize}
+	\item A proper wavefunction must be single-valued, continuous in its first derivative, continuous itself, and finite over a finite region (Figure 7B.4)
+	\item These constraints on the form of the wavefunctions are the mathematical reason for quantized energy states. This idea can give profound insight in predicting which systems might exhibit greater degrees of quantization
+	\item To find the probability of finding a particle within a particular region, simply integrate $\psi^*\psi$ over that region.
+	\item Practice Problem (P.I.B.):
+	\begin{itemize}
+		\item Consider an un-normalized wavefunction $\psi(0,1) = \sin\pi x\hspace{2em}\psi(-\infty,0]\cup[1,\infty)=0$
+		\item Normalize this function
+		\item Find the probability of finding the particle within $[0,0.25]$
+	\end{itemize}
+\end{itemize}
+\section{The Principles of Quantum Theory}
+\begin{itemize}
+	\item Quantum mechanics is practiced in the wold of linear algebra
+	\item Operators are the linear algebra term for mathematical operations (such as multiplication, differentiation, integration, etc.)
+	\item The Hamiltonian operator gives the energy of a wavefunction, as it includes the kinetic and potential energy of a system. In one dimension: $\hat{H} = -\dfrac{\hbar^2}{2m}\dfrac{\mathrm{d}^2}{\mathrm{d}x^2}+V(x)$
+	\item Now we can write the Schr\"odinger equation as: $\hat{H}\psi=E\psi$
+	\item The Schr\"odinger equation is an example of an \emph{eigenvalue equation}
+	\begin{itemize}
+		\item $\hat{A}f=Cf$ is the general form for eigenvalue equations
+		\item $\psi$ is called an \emph{eigenfunction}
+		\item $E$ is the corresponding \emph{eigenfunction}
+	\end{itemize}
+	\item Other observable quantities also have operators like the hamiltonian
+	\begin{itemize}
+		\item $\hat{x} = x$
+		\item $\hat{p}_x = \dfrac{\hbar}{i}\dfrac{\mathrm{d}}{\mathrm{d}x}$
+		\item Many more -- one for each observable quantity
+		\item The eigenvalue \emph{is} the measurable value for the property represented by the operator
+	\end{itemize}
+	\item The potential function will take a form to match the system being modeled
+	\item All of the operators for observables are \emph{Hermitian}, meaning that:
+	\begin{itemize}
+		\item $\displaystyle\int\psi_i^*\hat{\Omega}\psi_j\mathrm{d}\tau = \left[\displaystyle\int\psi_j^*\hat{\Omega}\psi_i\mathrm{d}\tau\right]^*$
+		\item The eigenvalues are real (not complex-valued)
+		\item The eigenfunctions are an orthogonal set
+	\end{itemize}
+	\item Orthogonality takes a broader definition in the context of linear algebra
+	\item Two functions are orthogonal if $\displaystyle\int f^*g\mathrm{d}\tau=0$
+	\item So, for eigenfunctions of an Hermitian operator: $\displaystyle\int\psi_i^*\psi_j\mathrm{d}\tau=0\hspace{1em}\mathrm{for}\hspace{1em} i\neq j$
+	\item Orthogonality can sometimes be confirmed by inspection through symmetry arguments
+	\item After normalization, a set of Hermitian eigenfunctions are \emph{orthonormal}
+	\item Superpositions:
+	\begin{itemize}
+		\item Not every proper QM wavefunction is an eigenfunction of all QM operators
+		\item Eigenfunctions are often mixed in linear combinations: $\Psi = \displaystyle\sum c_i\psi_i$
+		\item Such a quantum mechanical state is called a “Superposition”
+		\item This is the infamous Schr\"odinger's cat state
+		\item More later on how and why a particle might be in an eigenstate vs a superposition
+		\item Suppose a particle is in a superposition of two linear momentum eigenstates:
+		\begin{itemize}
+			\item Any single measurement will yield the momentum which corresponds to one of the eigenstates
+			\item The probability of observing a particular momentum is proportional to the value $\left|c_k\right|^2$
+			\item Many repeat measurements (measurements on identical systems) will yield an average value equal to the \emph{expectation value}: $\avg{\hat{p}} = \displaystyle\int\psi^*\hat{p}\psi\mathrm{d}\tau$
+			\item This is as good a time as any to introduce bra-ket notation
+		\end{itemize}
+	\end{itemize}
+	\item The Uncertainty Principle:
+	\begin{itemize}
+		\item It is clear by inspection that a wavefunction cannot give a QM particle a well-defined position
+		\item Closer analysis shows that systems with more well-defined positions will always have less-defined momenta
+		\item My Wavepacket visualization shows this relationship
+		\item This is the Heissenberg Uncertainty Principle -- That you cannot know both the momentum and position of a QM particle
+		\item The principle can be expressed mathematically as: $\Delta p_x\Delta x \geq \frac{1}{2}\hbar$
+		\item $\Delta p_x$ can be interpreted as the uncertainty in momentum along $x$
+		\item We can quantify the uncertainty with: $\Delta p_x = \left[\avg{p_x^2}-\avg{p_x}^2\right]^{\nicefrac{1}{2}}$
+		\item Actually, the uncertainty principle can be extended to other complementary pairs of observables as well
+		\item Observables are complementary if $\hat{\Omega}_1\hat{\Omega}_2\psi\neq\hat{\Omega}_2\hat{\Omega}_1\psi$ (the operators don't commute)
+		\item We can create a new operator, called the commutator: $\left[\hat{\Omega}_1,\hat{\Omega}_2\right]=\hat{\Omega}_1\hat{\Omega}_2-\hat{\Omega}_2\hat{\Omega}_1$
+		\item The generalized uncertainty principle is: $\Delta\Omega_1\Delta\Omega_2\geq\frac{1}{2}\left|\avg{\left[\hat{\Omega}_1,\hat{\Omega}_2\right]}\right|$
+	\end{itemize}
+	\item The Postulates of QM:
+	\begin{itemize}
+		\item We have already been talking about the fundamental postulates of quantum mechanics, which give the mathematical foundation for all of QM 
+	\end{itemize}
+	\begin{itemize}
+		\item All dynamical information for a system is contained in the wavefunction $\psi$
+		\item The probability of finding a particle at a particular point is proportional to $\left|\psi\right|^2$
+		\item Wavefunctions must be continuous, finite, single-valued, and continuous in their 1st derivative
+		\item Observable values are found from corresponding operators (either eigenvalues or expectation values)
+		\item Complementary observables are constrained by an uncertainty relationship
+	\end{itemize}
+\end{itemize}
+\section*{Experiments and Interpretations in QM}
+\begin{itemize}
+	\item Single photon diffraction -- wave-particle duality
+	\item Silver atom spin -- Superposition created by changing field direction
+	\item Light polarization -- With demo! and minutephysics Bell's theorem video
+	\item Delayed Choice Quantum Eraser -- “Entanglement”
+	\item Bell's Inequality  -- No hidden variables, with Veritasium video
+	\item My Quantum Mechanics Strangeness Soap Box regarding coherence and scientism
+	\item Pilot Wave Theory -- With Veritasium video “Is this what quantum mechanics looks like?”
+\end{itemize}
+
+\chapter{The Quantum Theory of Motion}
+\section{Translation}
+\begin{itemize}
+	\item Free motion in one dimension:
+	\begin{itemize}
+		\item The appropriate form of the Schr\"odinger equation is: $-\dfrac{\hbar^2}{2m}\dfrac{\mathrm{d}^2\psi(x)}{\mathrm{d}x^2}=E\psi(x)$
+		\item The solutions are: $\psi_k(x)=Ae^{ikx}+Be^{-ikx}$ with $E_k = \dfrac{k^2\hbar^2}{2m}$
+		\item For the free particle, all values of $k$ are acceptable, and there is no energy quantization
+		\item $B$ and $A$ are parameters that define what ratio of the wave is traveling left vs right
+	\end{itemize}
+	\item Confined motion in one dimension (Particle in a box):
+	\begin{itemize}
+		\item For confined motion, we set the potential to be infinite everywhere except a small range ($x\in (0,L)$)
+		\item To find the solution over this range, we first rearrange the free-particle solution as: $\psi_k\left(x\in [0,l]\right) = C\sin kx + D\cos kx$
+		\item Because of the infinite potential walls, the wavefunction must go to zero at $x=0$ and $x=L$
+		\item This requirement further constrains the acceptable solutions and after normalization we are left with:
+		
+		 $\psi_n(x) = \sqrt{\dfrac{2}{L}}\sin\left(\dfrac{n\pi x}{L}\right)$ and $E_n = \dfrac{n^2h^2}{8mL^2}$ with $n=1,2,\cdots$
+		 \item Because $n$ must be an integer, only certain states and energies are allowed
+		 \item With increasing $n$, there is increasing energy and and increasing number of nodes
+		 \item Find a general solution for transition energies $n+1\leftarrow n$
+		 \item There is a zero-point energy of $\dfrac{h^2}{8mL^2}$
+		 \item This model can be extended to multiple dimensions with:
+		 
+		 $\psi_{n_x,n_y}(x,y) =\dfrac{2}{\sqrt{L_xL_y}}\sin\left(\dfrac{n_x\pi x}{L_x}\right)\sin\left(\dfrac{n_y\pi y}{L_y}\right)$ with $E_{n_x,n_y}=\dfrac{h^2}{2m}\left(\dfrac{n_x^2}{L_x^2}+\dfrac{n_y^2}{L_y^2}\right)$
+		 
+		 $\psi_{n_x,n_y,n_z}(x,y,z) =\sqrt{\dfrac{8}{L_xL_yL_z}}\sin\left(\dfrac{n_x\pi x}{L_x}\right)\sin\left(\dfrac{n_y\pi y}{L_y}\right)\sin\left(\dfrac{n_z\pi z}{L_z}\right)$
+		 
+		 with $E_{n_x,n_y,n_z}=\dfrac{h^2}{2m}\left(\dfrac{n_x^2}{L_x^2}+\dfrac{n_y^2}{L_y^2}+\dfrac{n_z^2}{L_z^2}\right)$
+		 \item The wavefunctions for 2 and 3 dimensions are 2 and 3 dimensional sin functions
+		 \item Note that for 2 and 3 dimensions, the energy spacings are more complex and include some degenerate energy levels		 
+	\end{itemize}
+	\item PIB in the real world -- “Tunneling”
+	\begin{itemize}
+		\item In reality, no potentials rise to infinity so particles are not \emph{completely} confined in space
+		\item A potential that is lower than the kinetic energy can be easily overcome, but for quantum objects a particle can also transmit through a barrier greater than the kinetic energy
+		\item Such a barrier is called a “classically forbidden region,” and within them the wavefunction decays exponentially $\psi\propto e^{-\kappa x}$
+		\item The decay constant is: $\kappa = \dfrac{\sqrt{2m(V-E)}}{\hbar}$, so more massive particles tunnel with less efficiency
+		\item Figure 8A.9 illustrates the wavefunction decay and transmission through a classically forbidden region
+		\item The transmission probability is: $T=\left[1+\dfrac{\left(e^{\kappa L}-e^{-\kappa L}\right)^2}{16\varepsilon(1-\varepsilon)}\right]^{\nicefrac{1}{2}}$
+		\item Here, $L$ is the barrier width, and $\varepsilon=\dfrac{E}{V}$
+		\item Note that even when $E>V$, there is still a probability of scattering backward
+	\end{itemize}
+\end{itemize}
+
+\section{Vibrational Motion}
+\begin{itemize}
+	\item The Harmonic Oscillator:
+	\begin{itemize}
+		\item For an harmonic oscillator, the restorative force is: $F=-k_fx$
+		\item And the potential is the integral of that force: $V(x)=\frac{1}{2}k_fx^2$
+		\item This gives a Schr\"odinger equation of: $-\dfrac{\hbar^2}{2m}\dfrac{\mathrm{d}^2\psi(x)}{\mathrm{d}x^2} + \frac{1}{2}k_fx^2\psi(x)=E\psi(x)$
+		\item And energy levels of: $E_v = \left(v+\frac{1}{2}\right) \hbar\omega$
+		\item $\omega$ is the fundamental frequency, and has the value $\omega=\sqrt{\dfrac{k_f}{\mu}}$
+		\item $\mu$ is the reduced mass, which for a diatomic molecule is: $\mu=\dfrac{m_Am_B}{m_a+m_B}$
+		\item For the harmonic oscillator, energy states are always separated by $\hbar\omega$
+		\item The zero-point energy is $E_0=\frac{1}{2}\hbar\omega$
+		\item The solutions to the Schr\"odinger equation are much more complex in this case:
+		
+		$\psi_v(x) = N_vH_v\left(\dfrac{x}{\alpha}\right)e^{-\dfrac{x^2}{2\alpha^2}}$ where $\alpha = \left(\dfrac{\hbar^2}{\mu k_f}\right)^{\nicefrac{1}{4}}$
+		\item $N_v$ is just a normalization constant, which cannot be represented by a simple formula
+		\item $H_v(y)$ are the Hermite Polynomials, given in table 8B.1. Thank mathematicians for them
+		\item Note that the wavefunctions all decay at either end, according to a gaussian function, and contain oscillatory behavior like the PIB solutions
+		\item At higher levels of excitation, the probability density is concentrated into the wings (Figure 8B.7)
+	\end{itemize}
+	\item The Properties of Oscillators:
+	\begin{itemize}
+		\item We can find some interesting mean values by calculating expectation values
+		\item $\avg{x}=0$
+		\item $\avg{x^2}=\left(v+\frac{1}{2}\right)\dfrac{\hbar}{\sqrt{\mu k_f}}$
+		\item $\avg{V}=\frac{1}{2}\left(v+\frac{1}{2}\right)\hbar\omega=\frac{1}{2}E_v$
+		\item $\avg{E_k}=\frac{1}{2}E_v$
+		\item Tunneling can occur both at the extended and compressed end of an harmonic oscillator
+	\end{itemize}
+	\item Real vibrational potentials are not harmonic, with significant consequences which we will cover in chapter 12
+\end{itemize}
+
+\section{Rotational Motion}
+\begin{itemize}
+	\item Rotation in two dimensions (particle on a ring):
+	\begin{itemize}
+		\item Classically, a rotating object has: $E=\dfrac{J_z^2}{2I}$ where $I=mr^2$
+		\item We know that $J_z=\pm pr$ and $p=\dfrac{h}{\lambda}$, so $J_z=\pm\dfrac{hr}{\lambda}$
+		\item Since the ring forms a closed loop, and $\psi$ must be single-valued, $\lambda$ is constrained to be simple fractions of the circumference (Figure 8C.2)
+		\item The solutions to the Schr\"odinger equation are: $\psi_{m_l}(\phi) = \dfrac{e^{im_l\phi}}{\sqrt{2\pi}}$ where $m_l = 0, \pm1, \pm2,\ldots$
+		\item The energies are: $E_{m_l}=\dfrac{m_l^2\hbar^2}{2I}$
+		\item The angular momentum is also quantized: $J_z=m_l\hbar$ with $m_l=0,\pm1,  \pm2,\ldots$		
+	\end{itemize}
+	\item Rotation in three dimensions (rigid rotor):
+	\begin{itemize}
+		\item With rotation in three dimensions, the wavefunction must be continuous across the entire surface of a sphere
+		\item In spherical polar coordinates, the solutions to the Schr\"odinger equation are separable (i.e. $\psi(\theta, \phi) = \Theta(\theta)\Phi(\phi)$)
+		\item The solutions are a family of functions called \emph{spherical harmonics}, which have two quantum numbers $l$ and $m_l$
+		\item $l$ takes values of $0,1,2,\ldots$ and $m_l$ takes values of $-l,-l+1,\ldots,l-1,l$
+		\item Table 8C.1 gives the functions, and Figure 8C.8 shows how some spherical harmonics look
+		\item The energies of a rigid rotor are: $E_{l,m_l}=l(l+1)\dfrac{\hbar^2}{2I}$
+		\item For rotors, there is no zero point energy
+		\item The energy level degeneracy is $(2l+1)$ because of all the degenerate values of $m_l$
+		\item Total angular momentum can be found by: $\hat{l}^2\psi=l(l+1)\hbar^2$
+		\item The z-projection of angular momentum is: $\hat{l}_z\psi=m_l\psi$
+		\item Since the z-component of the angular momentum is quantized, that means that the physical orientation of the rotating molecule is quantized. Molecules can literally only rotate at certain angles! (Figure 8C.9)
+		\item Note that $\left[\hat{l}^2,\hat{l}_q\right]=0$ where $q=x,y, or z$
+		\item However, $\left[\hat{l}_x,\hat{l}_y\right]=i\hbar\hat{l}_z$, $\left[\hat{l}_y,\hat{l}_z\right]=i\hbar\hat{l}_x$, and $\left[\hat{l}_z,\hat{l}_x\right]=i\hbar\hat{l}_y$
+		\item These commutators mean that if the $z$ momentum is known, then the $x$ and $y$ momenta are unknown
+		\item The normal vector of the rotation forms a cone, as shown in Figure 8C.11
+	\end{itemize}
+\end{itemize}
+
+\chapter{Atomic Structure and Spectra}
+\section{Hydrogenic Atoms}
+\begin{itemize}
+	\item Hydrogen atoms have only a single electron, so it makes a very simple system for electronic energy levels
+	\item The atomic emission lines of H have been analyzed for hundreds of years
+	\item Johannes Rydberg found a pattern to the lines: $\tilde{\nu}=\tilde{R}_H\left(\dfrac{1}{n_1^2}-\dfrac{1}{n_2^2}\right)$
+	\item $\tilde{\nu}$ is the \emph{wavenumber} ($cm^{-1}$), which is proportional to the energy. $\tilde{\nu}=\dfrac{1}{\lambda}=\dfrac{\nu}{c}$
+	\item $\tilde{R}_H=109677~cm^{-1}$
+	\item The Schr\"odinger equation and solutions:
+	\begin{itemize}
+		\item The only energy levels in a hydrogen atom are electronic energy levels
+		\item The potential for an electron comes from the Coulombic attraction to the nucleus: $V(r)=-\dfrac{Ze^2}{4\pi\epsilon_0r}$
+		
+		\item $r$ is the radius, $Z$ is the nuclear charge, $e$ is the elemental charge, and $\epsilon_0$ is the vacuum permittivity
+		\item There are also two components to the kinetic energy: $E_{k,electron}$ and $E_{k,nucleus}$
+		\item Thea final Hamiltonian is: $\hat{H}=-\dfrac{\hbar^2}{2m_e}\nabla_e^2-\dfrac{\hbar^2}{2m_N}\nabla_N^2-\dfrac{Ze^2}{4\pi\epsilon_0r}$
+		\item First, the Born/Oppenheimer approximation lets us separate out all of the nuclear position variables
+		\item All of the nuclear motion is what we covered before: translation, vibration, and rotation
+		\item What's left is the electronic energy with variables $r$, $\theta$, and $\phi$ centered about the nucleus
+		\item Thankfully, the potential is centrosymmetric, so the angular components can separate out: $\psi(r,\theta,\phi)=R(r)Y(\theta,\phi)$
+		\item We already know the angular solutions - the spherical harmonics!
+		\item The angular momentum operators and eigenvalues are precisely the same for a hydrogen atom as for a 3-D rigid rotor
+		\item The radial function is also thankfully solved by the mathematicians of centuries gone by
+		\item $R_{n,l}(r) = N_{n,l}\rho^lL_{n-l-1}^{2l+1}(\rho)e^{-\nicefrac{\rho}{2}}$
+		\item $L_{n-l-1}^{2l+1}(\rho)$ are the \emph{associated Laguerre polynomials}, which are defined through a complex recursive algorithm
+		\item Note that although $R(r)$ has no angular dependence, the function is parameterized by $l$
+		\item Table 9A.1 gives the radial wavefunction for a number of electronic states
+	\end{itemize}
+	\item In the end, this gives us three quantum numbers to define the electron wavefunction:
+	\begin{itemize}
+		\item $n$ -- The principle quantum number, which determines energy
+		\item $l$ -- The angular momentum number, which determines the total angular momentum
+		\item $m_l$ -- The orbital quantum number, which determines the orientation in space
+	\end{itemize}
+	\item The energy levels (in $J$) are similar to the Rydberg Equation: $E_n = -\dfrac{hcZ^2\tilde{R}_N}{n^2}$
+	\item $\tilde{R}_N=\dfrac{\mu e^4}{32\pi^2\epsilon_0^2\hbar^2}\approx109700cm^{-1}$ (slightly lower for H and slightly more for heavier atoms)
+	\item The wavefunction for an electron is called an \emph{orbital}:
+	\begin{itemize}
+		\item The orbitals are categorized according to their quantum numbers in shells and subshells
+		\item “$s$” orbitals are spherically symmetric with highest intensity near the center
+		\item The radial probability of an orbital is: $P(r)=r^2\left|R(r)\right|^2$
+		\item “$p$” orbitals are dumbell shaped
+		\item $p$ orbitals are complex functions, but combinations can produce real-valued orbitals oriented along the $x$ and $y$ axes
+		\item “$d$” orbitals are clover-leaf shaped
+	\end{itemize}
+\end{itemize}
+\section{Many-Electron Atoms}
+\begin{itemize}
+	\item In many-electron atoms, the Hamiltonian must include the mutual repulsions between all pairings of electrons
+	\item These electron-electron repulsion terms make the Schr\"odinger equation unsolvable with current methods
+	\item The orbital approximation is a simple approximation to the true, unknown solutions
+	\begin{itemize}
+		\item We can assume that each electron has its own wavefunction
+		\item The unknown energy terms can be estimated using methods we will discuss later 
+		\item The shapes will deviate only slightly from the hydrogen atom orbitals, so we use them as models and use the same names and categories to describe each electron's wavefunction
+		\item We call the collection of wavefunctions for each electron a \emph{configuration}
+	\end{itemize}
+	\item Electron Spin:
+	\begin{itemize}
+		\item Magentic spin is an intrinsic, quantum mechanical property of electrons (and other particles)
+		\item The $s$ quantum number for electrons is always $s=\frac{1}{2}$
+		\item There is also a new quantum number, $m_s=\pm\frac{1}{2}$ (for electrons)
+		\item The spin angular momentum has the same operators as other angular momentum
+		\begin{itemize}
+			\item $\hat{s}^2\psi = s(s+1)\hbar^2\psi$
+			\item $\hat{s}_z\psi=m_s\psi$
+		\end{itemize}
+		\item The spin is represented by $\alpha$ for up-spin and $\beta$ for down-spin
+	\end{itemize}
+	\item The Pauli Principle:
+	\begin{itemize}
+		\item You are familiar with the Pauli Exclusion Principle: An orbital can hold at most two electrons, and their spins must be opposite
+		\item This is merely a special case of the more complete \emph{Pauli Principle}:
+		
+		When the labels of any two identical fermions are exchanged, the total wavefunction changes sign; when the labels of any two identical bosons are exchanged, the sign of the total wavefunction remains the same.
+		\item i.e. Fermions must be antisymmetric with respect to exchange, and bosons must be symmetric
+		\item How can we construct a total wavefunction which conforms to this principle?
+		\begin{itemize}
+			\item Consider the ground state of He: $1s^2$
+			\item We call the wavefunction for an upspin electron $\alpha$, and a downspin electron $\beta$
+			\item For He, we might say $\psi=\alpha(1)\beta(2)$, or $\psi=\alpha(2)\beta(1)$, but neither of those obey the Pauli principle
+			\item A combination, specifically $\psi=\dfrac{1}{\sqrt{2}}\left[\alpha(1)\beta(2)-\alpha(2)\beta(1)\right]$ does!
+			\item This expression can be found as the determinant of the matrix: $\dfrac{1}{\sqrt{2}}\begin{bmatrix} \alpha(1) & \alpha(2) \\ \beta(1) & \beta (2) \end{bmatrix}$
+			\item What about for Li? take the determinant of the following matrix: 
+			\[ \dfrac{1}{\sqrt{N!}}\begin{bmatrix} 
+			1s\alpha(1) & 1s\alpha(2) & 1s\alpha(3)\\
+			1s\beta(1) & 1s\beta(2) & 1s\beta(3)\\
+			2s\alpha(1) & 2s\alpha(2) & 2s\alpha(3)
+			\end{bmatrix} \]
+			\item Such determinants will always obey the Pauli principle, and are called Slater Determinants
+		\end{itemize}	
+	\end{itemize}
+	\item The 2s orbital is lower in energy than the 2p orbitals because they are less effectively shielded
+	\item The radial probability distribution functions (Figure 9B.4) show how s orbitals penetrate closer to the nucleus than p orbitals
+	\item Table 9B.1 shows the effective nuclear charge ($Z_{eff}-Z-\sigma$) for different orbitals
+	\item Hund's rule comes because electrons want to spread out spatially, and because electrons of the same spin exhibit more favorable spin correlation than electrons of different spins
+	\item Self-Consistent Field Orbitals (Hartree-Fock methods):
+	\begin{itemize}
+		\item The true orbitals are still different from the hydrogenic atomic orbitals
+		\item One attempt to find the correct energies is called self-consistent field theory
+		\item $\hat{H}_{total} = \displaystyle\sum\limits_{electrons}\hat{H}_{Hydrogenic} + V_{Electron~Repulsions} - V_{Exchange~Correlation}$
+		\item Begin with the hydrogenic orbitals
+		\item Pick one electron, and calculate the potential based on the total probability distribution functions of the other electrons
+		\item Use this new potential term to find a new wavefunction for that single electron
+		\item Do the same for all other electrons in turn
+		\item Repeat the entire process until the wavefunctions converge to within your tolerances
+		\item The exchange correlation tries to account for the fact that in real-time, electron positions are correlated
+		\item There are many different, complex ways of calculating this term, and it is a rich field for computational chemistry research
+	\end{itemize}
+\end{itemize}
+\section{Atomic Spectra}
+\begin{itemize}
+	\item Atomic spectra arise from transitions between different electronic energy levels
+	\item Note that this is not quite equivalent to the idea of different electronic configurations
+	\item Hydrogenic atoms
+	\begin{itemize}
+		\item We already know the transition energies
+		\item We need to introduce some \emph{selection rules}
+		\item $\Delta l = \pm 1$, $\Delta m_l = 0, \pm 1$, and $\Delta m_s = 0$
+		\item A Grotrian Diagram (Figure 9C.1) shows all of the allowed transitions
+	\end{itemize}
+	\item Complex Atoms
+	\begin{itemize}
+		\item With multi-electron atoms, we must deal with the $S$ and $m_S$ quantum numbers more directly (the capital letters denote total electron spin, rather than the spin of a single electron)
+		\item Consider the excited He configuration $1s^12s^1$
+		\item If all electrons are paired, this is called a singlet state
+		\item In a singlet state $S=0$ and there is only one wavefunction: $\dfrac{1}{\sqrt{2}}\left[\alpha(1)\beta(2) - \alpha(2)\beta(1)\right]$
+		\item If there are two unpaired electrons, then this is called a triplet state
+		\item Im a triplet state, $S=1$ and $m_S = 0, \pm 1$, and there are three wavefunctions:
+		
+		$\alpha(1)\alpha(2)$, $\dfrac{1}{\sqrt{2}}\left[\alpha(1)\beta(2) + \alpha(2)\beta(1)\right]$, and $\beta(1)\beta(2)$
+		\item Vector diagrams of these wavefunctions are shown in Figure 9C.2
+		\item Spin-orbit coupling is an effect that arises from the fact that an electron in an orbital with $l\geq 1$ has magnetic moments associated with both its orbital and its spin
+		\item The spin-orbit interaction gives rise to new total angular momentum quantum numbers for each electron: $j$ and $m_j$
+		\item $j$ can range in whole steps from $j=l+\frac{1}{2}$ to $j=l-\frac{1}{2}$, but $j\geq0$
+		\item The magnitude of the spin-orbit interaction increases with greater nuclear charge
+		\item Splitting from the spin-orbit interaction produces \emph{fine structure} to atomic spectra, like the doublet seen in sodium vapor lamps
+		\item External magnetic fields can also increase the strength of the spin-orbit interaction
+	\end{itemize}
+	\item Term Symbols
+	\begin{itemize}
+		\item The total angular momenta of all electrons combined ($L$, $S$, and $J$) can be conveyed in a \emph {term symbol}
+		\item $L$ is represented by a capital Roman letter
+		\item $S$ is represented by the multiplicity as a left-superscript
+		\item $J$ (when relevant), is represented by a right-supscript number
+		\item The simple configuration $p^2$ gives rise to many terms: $^1D$, $^3P_2$, $^3P_1$, $^3P_0$, $^1P$, and $^1S$
+		\item Hund's rule: Highest multiplicity is lowest in energy. For terms with similar multiplicity highest $L$ is lowest in energy		
+		\item Hund's rule makes it easy to find the ground state term for a given configuration
+		\begin{itemize}
+			\item draw the electron configuration like in 1210, with electrons favoring higher $m_l$ orbitals first
+			\item $L=\sum m_l$ and $S = \sum m_s$ 
+		\end{itemize}
+		\item For all the terms, there is a more tedious process which we will not learn here but which is totally awesome!
+		\item Russell-Saunders coupling has been presented here, where $L$ and $S$ (total momenta) interact. “j-j” coupling, where all momenta interact on the single-electron level, only applies for heavy atoms
+		\item Error on p. 388 -- The bottom row of the table of j values should be $\frac{1}{2}$ for both electrons
+	\end{itemize}
+	\item Selection rules for complex atoms are: $\Delta S=0$, $\Delta L=0,\pm1$, $\Delta l=\pm 1$, and $\Delta J=0,\pm1$ (but $J=0$ cannot transition to $J=0$)
+	\item The $\Delta S$ selection rule is relaxed in heavy atoms
+	\item Selection Rules come from the transition dipole integral: $\mu_{jk}=\displaystyle\int \psi_j^*\hat{\mu}\psi_k\mathrm{d}\tau$
+\end{itemize}
+
+\chapter{Molecular Structure}
+\section{Valence-Bond Theory}
+\begin{itemize}
+	\item The Born-Oppenheimer approximation means that we can find the energy for any given internuclear distance
+	\item Figure 10A.1 shows a molecular potential energy curve
+	\item The lowest point in the energy curve gives the equilibrium bond length and the bond dissociation energy
+	\item For polyatomic molecules, there is a multi-dimensional surface but all bond lengths are shifted to minimize the total potential energy
+	\item The basic shape can be explained by a number of energetic terms
+	\begin{itemize}
+		\item At very close distances, nuclear and electronic repulsions give very high energies
+		\item At very large distances, the energy approaches zero because there are no interactions
+		\item At intermediate distances, the bonding electrons are able to spread out, spanning the two atoms. This lowers the energy by confining the electrons less, and enhances the electron density which is attracted to both nuclei
+	\end{itemize}
+	\item Bonds are often described as orbital overlap:
+	\begin{itemize}
+		\item Draw the model for \ch{H2}
+		\item $\Psi(1,2) = A(1)B(2) + A(2)B(1)$
+		\item This arrangement enhances the electron density between the two nuclei
+		\item Figure 10A.3 and 10A.4 show some atomic orbital arrangements which can lead to σ and π bonds
+	\end{itemize}
+	\item For some diatomics, it becomes helpful to express the bond as partially ionic and partially covalent: $\Psi = \psi_{covalent}+\lambda\psi_{ionic}$
+	\item We can vary the value of $\lambda$ to find the ratio with minimum energy
+	\item Because of the \emph{variational} principle, we know that the energy of this trial function is equal-to or greater-than the true energy
+	\item We can also find the energy of a system with resonance: $\Psi = \displaystyle\sum\lambda_1\psi_i$
+	\item Using atomic orbitals as-is will not give the right angles, or the right number of bonds
+	\item Hybridization combines the atomic orbitals to create new orbitals with the right energies and right angles to match experiment
+	\item $sp$, $sp^2$, $sp^3$, $sp^3d$, and $sp^3d^2$ hybridizations give rise to the different electron domain geometries
+	\item σ bonds are made from overlap of hybridized orbitals, while π bonds are made from overlap of unhybridized p orbitals
+\end{itemize}
+\section{Principles of Molecular Orbital Theory}
+\begin{itemize}
+	\item While valence bond theory can explain several trends and properties, but it really has no connection to the Schr\"odinger equation
+	\item Sketch the \ch{H2^{+}} system	
+	\item Actual solutions to the Schr\"odinger equation are orbitals which aren't centered around any single atom. They are called \emph{molecular orbitals}
+	\item These orbitals can be \emph{approximated} by linear combinations of atomic orbitals (LCAO-MOs)
+	\item The two lowest MOs for \ch{H2^{+}} are $\psi = N\left(1s_A\pm1s_B\right)$
+	\item The addition of the two orbitals gives rise to a \emph{bonding} orbital, where the density of electrons between the nuclei is enhanced through constructive interference
+	\item This shift of density to the bonding region \emph{is} the bond. Why it gives rise to the molecular potential energy curve is a complex issue
+	\begin{itemize}
+		\item The electron is now attracted to two nuclei instead of one, but it is farther away from them both
+		\item The kinetic energy is decreased. This can be discussed in terms of $\psi$ curvature, and reduced confinement (Think two shadows or two water droplets which merge)
+		\item The potential energy is also lowered by tightening around the nuclei around the edges
+		\item Apparently there is still some controversy over the best way to explain chemical bonds
+	\end{itemize}
+	\item Figures 10B.7 and 10B.8 show the two combinations of H1s orbitals
+	\item The difference of the two orbitals gives rise to an \emph{antibonding} orbital, where the density of electrons between the nuclei is suppressed through destructive interference
+	\item Both of these MOs are $\sigma$-type orbitals: $\sigma$ and $\sigma^*$
+	\item MOs can also be notated by their symmetry: $\sigma_g$ and $\sigma^*_u$	
+\end{itemize}
+\section{Homonuclear Diatomic Molecules}
+\begin{itemize}
+	\item As we add electrons, the energies and shapes become more complex but they follow the same basic principles
+	\item That is, orbitals can be approximated as LCAO-MOs, forming bonding and antibonding orbitals with different symmetries
+	\item For diatomics, MOs are created by combining one atomic orbital from each atom
+	\item We common draw MO energy level diagrams like that seen in Figure 10C.1
+	\item In addition to the s orbitals, p orbitals also combine (Figure 10C.4 and 10C.5)
+	\item The p orbitals create both $\sigma$ and $\pi$ MOs
+	\item The overlap integral is an important quantity: $S=\displaystyle\int \chi_{A}^{*} \chi_{B} \mathrm{d}\tau$
+	\item $S(1sA,1sB)=\left[1+\dfrac{ZR}{a_0}+\dfrac{1}{3}\left(\dfrac{ZR}{a_0}\right)^2\right]e^{-\nicefrac{ZR}{a_0}}$
+	\item Symmetry arguments can be used to show many overlap integrals are 0 (i.e. $s$-$p$ and $p_i$-$p_j$), which limits which AOs are even able to combine at all
+	\item Figures 10C.10 and 10C.12 show two different orderings in the diatomic MOs
+	\item The difference can be explained in two ways
+	\begin{itemize}
+		\item As internuclear distance increases, the relative value of the overlap integrals for $p_z$-$p_z$ and $p_{x,y}$-$p_{x,y}$ orbitals switches places. For smaller atoms, the $p_z$ overlap is greatest
+		\item $s$-$p$ mixing is greater for \ch{Li}, etc. than for \ch{F}. This means that for \ch{Li} the AOs used are slightly hybridized, shifting the energies of the orbitals involved. For \ch{N2}, the $2p\sigma_g$ MO is actually $27\%$ $s$ character, while for \ch{O2} it is only $13\%$ $s$ character
+	\end{itemize}
+	\item Figure 10C.11 shows how these MO energies shift across the periodic table
+	\item Overall bond order is $b=\frac{1}{2}\left(N-N^*\right)$
+	\item Photoelectron spectroscopy (Figure 10C.14) shows observed ionization energies are similar to calculated MO energies
+\end{itemize}
+\section{Heteronuclear Diatomic Molecules}
+\begin{itemize}
+	\item For heteronuclear diatomics, the atoms contribute asymmetrically to molecular orbitals
+	\item $\psi = c_A\chi_A + c_B\chi_B$
+	\item This leads to a \emph{polar} bond, where electron density is concentrated around one atom
+	\item The uneven sharing is governed by the abstract property \emph{electronegativity} ($\chi$)
+	\begin{itemize}
+		\item Mulliken electronegativity is defined as: $\chi = \frac{1}{2}\left(I + E_{ea}\right)$
+		\item Pauling electronegativity is defined through the equation:
+		
+		$\left|\chi_A-\chi_B\right| = \left[D_0(AB)-\frac{1}{2}\left(D_0(AA)+D_0(BB)\right)\right]^{\nicefrac{1}{2}}$
+		\item Here, $D_0$ are the bond dissociation energies for bonds between $A$ and $B$
+	\end{itemize}
+	\item The coefficients can be found using the variation principle:
+	\begin{itemize}
+		\item Like before, we find the energy of a trial function by: $E = \displaystyle\int \psi^*_{trial}\hat{H}\psi_{trial}\mathrm{d}\tau$
+		\item Solving that integral generally and finding the minimum energy with respect to $c_A$ and $c_B$ yields the following two \emph{secular equations}:
+		
+		$\left(\alpha_A-E\right)c_A + \left(\beta-ES\right)c_B=0$
+		
+		$\left(\beta-ES\right)c_A+\left(\alpha_B-E\right)c_B=0$ (Note that this is incorrect in the book)
+		\begin{itemize}
+			\item $\alpha_A$ and $\alpha_B$ are the hydrogenic orbital energies ($H_{11}$ and $H_{22}$), called the \emph{Coulomb integral}
+			\item $S$ is the overlap integral
+			\item E is the MO energy we are solving for
+			\item $\beta$ is the \emph{resonance integral} ($H_{12}$), and vanishes as $S$ goes to $0$
+		\end{itemize}
+		\item Solving the system of secular equations is a matter of finding the determinant of the matrix:
+		
+		\[\begin{vmatrix} 
+		\alpha_A - E & \beta - SE \\
+		\beta - SE & \alpha_B-E
+		\end{vmatrix} =0\]
+		\item This results in a quadratic equation, whose solutions are the two MO energies
+		\item For homonuclear diatomics, $\alpha_A=\alpha_B$ and $E_\pm = \dfrac{\alpha\pm\beta}{1\pm S}$
+		\item For heteronuclear diatomics, we must simplify the expression by assuming that $S=0$:
+		
+		$E_\pm = \frac{1}{2}\left(\alpha_A+\alpha_B\right) \pm\frac{1}{2}\left(\alpha_A-\alpha_B\right) \left[1+\left(\dfrac{2\beta}{\alpha_A-\alpha_B}\right)^2\right]^{\nicefrac{1}{2}}$
+		\item Figure 10D.4 shows the MO energies for different AO energy ratios. Note that with any degree of mixing, the energies are always split by a minimum value
+		\item AOs with dissimilar energies will lead to MOs dominated by one AO and to weaker bonding and antibonding effects
+		\item We can go back and solve for the coefficients
+		\item For homonuclear diatomics: $c_A=\dfrac{1}{\sqrt{2(1\pm S)}}$ and $c_B = \pm c_A$
+		\item For heteronuclear diatomics, we again simplify by assuming $S=0$. For the ground state:
+		
+		$c_A = \left[1+\left(\dfrac{\alpha_A-E}{\beta}\right)^2\right]^{-\nicefrac{1}{2}}$ and $c_B = \left[1+\left(\dfrac{\beta}{\alpha_A-E}\right)^2\right]^{-\nicefrac{1}{2}}$
+	\end{itemize}
+\end{itemize}
+\section{Polyatomic Molecules}
+\begin{itemize}
+	\item The same approach of using LCAOs to form MOs can be extended to polyatomic molecules
+	\item H\"uckel theory uses secular determinants to estimate the energies of conjugated π systems
+	\begin{itemize}
+		\item Here, the AOs which overlap are all the involved p-bonds
+		\item Of course, for rigorous computations full integrals are calculated
+		\item For work done by hand, we make several approximations: 
+		\begin{itemize}
+			\item All overlap integrals are set to 0 ($S=0$)
+			\item All resonance integrals for non-adjacent orbitals are set to 0 ($\beta_{non-adjacent}=0$)
+			\item All resonance integrals for adjacent orbitals are set equal to each other, and all Coulomb integrals are set equal to each other
+		\end{itemize}
+		\item These approximations simplify the secular determinant to (for the case of butadiene):
+		
+		\[\begin{vmatrix} 
+		\alpha -E & \beta & 0 & 0 \\
+		\beta & \alpha - E & \beta & 0 \\
+		0 & \beta & \alpha - E & \beta \\
+		0 & 0 & \beta & \alpha -E
+		\end{vmatrix} =0\]
+		
+		or
+		
+		\[\mathbf{H} = \alpha\mathbf{1} + \beta
+		\begin{vmatrix} 
+		0 & 1 & 0 & 0 \\
+		1 & 0 & 1 & 0 \\
+		0 & 1 & 0 & 1 \\
+		0 & 0 & 1 & 0
+		\end{vmatrix}\] which diagonalizes to give the energies as:
+		\[\begin{vmatrix} 
+		-\dfrac{1}{2}-\dfrac{\sqrt{5}}{2} & 0 & 0 & 0 \\
+		0 & \dfrac{1}{2}-\dfrac{\sqrt{5}}{2} & 0 & 0 \\
+		0 & 0 & -\dfrac{1}{2}+\dfrac{\sqrt{5}}{2} & 0 \\
+		0 & 0 & 0 & \dfrac{1}{2}+\dfrac{\sqrt{5}}{2}
+		\end{vmatrix}\]
+		\item Such the matrix is sparse (populated by many 0s) is isn't quite as tedious to solve as it might be
+		\item For butadiene, this solves to: $E= \alpha\pm1.62\beta$ and $E=\alpha\pm0.62\beta$ (Figure 10E.2)
+		\item With 4 electrons in the π system, this gives total energy of $4\alpha +4.48\beta$
+		\item The HOMO-LUMO gap is $-1.24\beta$
+		\item $\alpha$ is the energy of the atomic orbitals, so the deviation from alpha can be considered the bond (or anti-bond) strength ($4.48\beta$ for butadiene)
+		\item $\beta \approx -110~\nicefrac{kJ}{mol}$, and $2\beta$ is the bonding energy of a single π bond without any delocalization or resonance stabilization
+		\item For butadiene, resonance stabilization contributes $0.48\beta$ beyond the binding energy of two isolated π bonds
+		\item For cyclic molecules, like benzene, remember to put the $\beta$ term linking \ch{C1} to \ch{C6} as neighbors
+	\end{itemize}
+	\item Computational Chemistry is covered more thoroughly in our labs on the subject
+	\begin{itemize}
+		\item Semi-empirical methods will simplify the problem by selectively ignoring as many integrals as reasonable. H\"uckel theory is one example of a semi-empirical approach
+		\item Ab-initio methods simplify the problem by representing orbitals as gaussian functions, which are easier to integrate, differentiate, and multiply
+		\item Density Functional Theory (DFT) simplifies the problem by finding only the electron density, rather than the actual wavefunction
+		\item Solutions can be visually represented as isosurfaces or solvent-accessible surfaces, painted with a colorscale representing electrostatic potential
+	\end{itemize}
+\end{itemize}
+
+\chapter{Molecular Symmetry}
+\section{Symmetry Elements}
+\begin{itemize}
+	\item Some objects have more symmetry than other objects
+	\item We can robustly characterize symmetry by the operations (rotations, reflections, etc.) which produce identical configurations
+	\item Symmetry elements are the points, lines, or planes symmetry operations are built around:
+	\begin{itemize}
+		\item Rotational axes are labeled $C_n$ with rotations of $\dfrac{360^{\circ}}{n}$
+		\item Planes of reflection are labeled $\sigma_v$, $\sigma_h$, $\sigma_v^\prime$, etc.
+		\item Inversion symmetry is labeled as $i$
+		\item Axes of improper rotation are labeled $S_n$, combining a reflection with a a rotation $C_n$
+		\item The identity element $E$ makes no changes at all
+	\end{itemize}
+	\item Objects with the same symmetry elements are classified as belonging to s certain symmetry point group
+	\begin{itemize}
+		\item Figure 11A.7 shows a flow chart for finding the symmetry point group for a given molecule
+		\item Figure 11A.8 shows graphical representations for many of the most common point groups
+	\end{itemize}
+	\item The most immediate result of symmetry is the presence or absence of a dipole
+	\item Chirality is an interesting counterpoint to symmetry
+	\begin{itemize}
+		\item Chiral molecules are not superimposable on their reflection
+		\item A common sort of chiral center will have four different groups bound in tetrahedral geometry
+		\item Chiral molecules are \emph{optically active}, meaning that they will rotate the plane of polarized light
+		\item Many biological molecules are chiral, and pharmacological molecules may need to be manufactured enantiometrically pure (levomethamphetamine, for example)
+	\end{itemize}
+\end{itemize}
+\section{Group Theory}
+\begin{itemize}
+	\item Group theory is the branch of mathematics which is relevant to molecular symmetry
+	\item Symmetry operations can be represented by matrices ($\mathbf{D}$):
+	\begin{itemize}
+		\item The form of the matrix $\mathbf{D}$ depends on the basis it is operating on. Your book uses atomic orbital basis sets, but I think it is easier to use unit vectors $\vec{x}$, $\vec{y}$, and $\vec{z}$
+		\item $ \mathbf{D}(\sigma_v) = 
+		\begin{bmatrix}
+		1&0&0\\
+		0&-1&0\\
+		0&0&1
+		\end{bmatrix}$ so 
+		$ \mathbf{D}(\sigma_v) \begin{bmatrix} \vec{x}&\vec{y}&\vec{z}\end{bmatrix} = \begin{bmatrix} \vec{x}&-\vec{y}&\vec{z}\end{bmatrix}$
+		
+		$ \mathbf{D}(\sigma_v^{\prime}) = 
+		\begin{bmatrix}
+		-1&0&0\\
+		0&1&0\\
+		0&0&1
+		\end{bmatrix}$ 
+		\hspace{2em} 
+		$ \mathbf{D}(\sigma_h) = 
+		\begin{bmatrix}
+		1&0&0\\
+		0&1&0\\
+		0&0&-1
+		\end{bmatrix}$		
+		\hspace{2em} $ \mathbf{D}(i) = 
+		\begin{bmatrix}
+		-1&0&0\\
+		0&-1&0\\
+		0&0&-1
+		\end{bmatrix}$
+		
+		$ \mathbf{D}(C_n) = 
+		\begin{bmatrix}
+		\cos\left(\dfrac{2\pi}{n}\right)&\sin\left(\dfrac{2\pi}{n}\right)&0\\
+		-\sin\left(\dfrac{2\pi}{n}\right)&\cos\left(\dfrac{2\pi}{n}\right)&0\\
+		0&0&1
+		\end{bmatrix}$
+		\hspace{2em} $ \mathbf{D}(S_n) = 
+		\begin{bmatrix}
+		\cos\left(\dfrac{2\pi}{n}\right)&\sin\left(\dfrac{2\pi}{n}\right)&0\\
+		-\sin\left(\dfrac{2\pi}{n}\right)&\cos\left(\dfrac{2\pi}{n}\right)&0\\
+		0&0&-1
+		\end{bmatrix}$
+	\end{itemize}
+	\item All symmetric features of a molecule (such as a subset of the atomic orbitals) can be represented by an \emph{irreducible representation} of the point group
+	\begin{itemize}
+		\item Consider the example of water: $C_{2v}$ point group (note that the molecules lies in the $yz$ plane)
+		\item The O$p_z$ orbital or the sum of H$1s$ orbitals will respond similarly under all symmetry operations, and are represented by the irreducible representation $A_1$		
+		\item The character ($\chi$) of an operation on a representation is indicative of whether that representation is symmetric or antisymmetric under the operation
+		\item The character table outlines the effect of all operations on the irreducible representations
+		
+		\begin{tabular}{c|cccc|c|c}
+			$C_{2v}$ & $E$ & $C_2$ & $\sigma_v(xz)$ & $\sigma_v^\prime(yz)$ & linear & quadratic \\ \midrule
+			$A_1$ & $1$ & $1$ & $1$ & $1$ & $z$& $x^2$, $y^2$, $z^2$ \\
+			$A_2$ & $1$ & $1$ & $-1$ & $-1$ & $R_z$ & $xy$\\
+			$B_1$ & $1$ & $-1$ & $1$ & $-1$ & $x$, $R_y$ & $xz$ \\
+			$B_2$ & $1$ & $-1$ & $-1$ & $1$ & $y$, $R_x$ & $yz$\\
+		\end{tabular}
+		\item What is the proper representation for the difference of H$1s$ orbitals? For O$p_y$ and O$p_x$? For the difference of H$p_x$ orbitals?
+		\item There are also irreducible representations, like $E$ or $T$, which can only be represented in multiple dimensions
+		\item They may have characters that are not $1$ or $-1$
+		\item $E$ represents doubly degenerate entities, and $T$ represents triply degenerate entities
+		\item Atomic orbitals from the same representation are combined to form molecular orbitals, called symmetry-adapted LCAO-MOs
+		\item First, group AOs into similar representations, making sums and differences of some orbitals to create symmetric and antisymmetric sets
+		\item To get the actual MO energies, solve the full secular determinant for each set
+		\item Consider the set of molecular orbitals for water (figures easily found on Google)
+	\end{itemize}
+\end{itemize}
+\section{Applications of Symmetry}
+\begin{itemize}
+	\item Symmetry and group theory can help with solving many integrals
+	\begin{itemize}
+		\item Any symmetric or antisymmetric function can be assigned to an irreducible symmetry representation
+		\item For each symmetry element, multiply the characters of the representations for each function involved in a product
+		\item The direct product can then be decomposed into the irreducible representations which it spans by finding which representations can add their characters to match the direct product
+		\item If the decomposition does not include $A_1$, then the integral \emph{must} go to $0$
+	\end{itemize}
+	\item Decomposition of large direct products can be difficult, but there is a reliable method to do it
+	\begin{itemize}
+		\item $n(\Gamma)=\frac{1}{h}\displaystyle\sum\chi^{(\Gamma)}(R)\chi(R)$
+		\item $h$ is the order of the group, or how many symmetry elements it contains
+		\item $\chi^{(\Gamma)}(R)$ is the character of representation $\Gamma$ for symmetry element $R$
+		\item $\chi(R)$ is the character of the direct product for symmetry element $R$
+		\item Decompose the direct product $9$ $-1$ $1$ $3$ in the $C_{2v}$ point group (water motions)
+	\end{itemize}
+	\item Symmetry can also be used to predict transition dipoles
+	\begin{itemize}
+		\item Identify the representations of the initial and final states
+		\item Identify the direct products $\psi_f^\star \vec{x}\psi_i$,  $\psi_f^\star \vec{y}\psi_i$, and $\psi_f^\star \vec{z}\psi_i$
+		\item If none of them contain $A_1$, then the transition dipole \emph{must} be $0$
+	\end{itemize}
+\end{itemize}
+
+\chapter{Rotational and Vibrational Spectra}
+\section{General Features of Molecular Spectroscopy}
+\begin{itemize}
+	\item Einstein A and B coefficients can give the absorption and emission rates:
+	\begin{itemize}
+		\item Stimulated absorption transition rate constant: $w_{f\leftarrow i}=B_{fi}\rho$
+		\item $\rho$ is essentially the intensity of light at the resonant frequency
+		\item Total absorption rate: $W_{f\leftarrow i} = N_iw_{f\leftarrow i}=N_iB_{fi}\rho$
+		\item Stimulated emission transition rate constant: $w_{f\rightarrow i}=B_{fi}\rho$
+		\item With these constants, even dim light would eventually equalize the excited and ground state populations
+		\item Adding the spontaneous emission rate constant ($A$), gives the total emission rate constant $w_{f\rightarrow i}=A+B_{fi}\rho$
+		\item At equilibrium, $N_iB_{fi}\rho=N_f\left(A+B_{fi}\rho\right)$
+		\item We can relate the $A$ and $B$ coefficients: $A=\left(\dfrac{8\pi h\nu^3}{c^3}\right)B$
+		\item This gives an estimate of the intensity of vacuum photons, and shows how large energy transitions will tend to spontaneously decay more rapidly than low energy transition
+	\end{itemize}	
+	\item The Beer-Lambert law shows how much light is absorbed as it passes through an absorbing species
+	\begin{itemize}
+		\item $I=I_010^{-\epsilon C l}$ 
+		
+		$\epsilon$ is the molar absorption coefficient, $C$ is the concentration, and $l$ is the pathlength
+		\item The Beer-Lambert law can be derived through calculus, considering the absorption through infinitesimally thin slices along the pathlength, but we will do bother with the derivation here
+		\item Intensity can be converted to transmittance: $T = \dfrac{I}{I_0}$ or absorbance: $A = \log\dfrac{I_0}{I}$
+		\item Absorbance is particularly useful because it is proportional to concentration: $A=\epsilon Cl$
+	\end{itemize}
+	\item Real transitions have finite linewidths due to at least a few factors
+	\begin{itemize}
+		\item Doppler broadening involves the apparent shift in light frequency that arises from translational motion toward or away from the source of light
+		\item $\nu_{receding}=\left(\dfrac{1-\frac{s}{c}}{1+\frac{s}{c}}\right)^{\nicefrac{1}{2}}\!\nu$ ~~and~~ $\nu_{approaching}=\left(\dfrac{1+\frac{s}{c}}{1-\frac{s}{c}}\right)^{\nicefrac{1}{2}}\!\nu$
+		\item For non-relativistic speeds, these simplify to: $\nu_{receding}\approx \dfrac{\nu}{1+\frac{s}{c}}$ and $\nu_{approaching}\approx \dfrac{\nu}{1-\frac{s}{c}}$
+		\item In the lab, gas phase molecules will travel in all directions at a distribution of speeds according to the Maxwell-Boltzmann law
+		\item This distribution of speeds leads to Doppler broadening of:
+		
+		$\delta\nu_{obs}=\dfrac{2\nu}{c}\left(\dfrac{2k_BT\ln 2}{m}\right)^{\nicefrac{1}{2}}$ and $\delta\lambda_{obs}=\dfrac{2\lambda}{c}\left(\dfrac{2k_BT\ln 2}{m}\right)^{\nicefrac{1}{2}}$
+		\item Lifetime broadening is an essential feature of the Heissenberg uncertainty principle. See the recent 3blue1brown video on that principle
+		\item Lifetime broadening is: $\delta \tilde{\nu}\approx \dfrac{5.3~cm^{-1}}{\nicefrac{\tau}{ps}}$
+	\end{itemize}
+	\item Experimental Techniques
+	\begin{itemize}
+		\item Sources of light include lamps, lasers, and synchrotrons
+		\item Spectral analysis is done either in the frequency or the time domain
+		\item Frequency domain techniques use a polychromator or monochromator
+		\item Time domain techniques include fourier transform and heterodyne/homodyne techniques
+		\item Detectors can be photovoltaic, pyroelectric, photomultipliers, photodiodes, CCDs, etc.
+	\end{itemize}
+\end{itemize}
+
+\section{Molecular Rotation}
+\begin{itemize}
+	\item Molecular rotation energies are calculated based on the rigid rotor model
+	\item Table 12B.1 shows the ways to calculate the moment of inertia for various common molecular geometries
+	\item Rotors are classified as spherical, symmetric, linear, or asymmetric
+	\item Spherical and Linear Rotors:
+	\begin{itemize}
+		\item $E_J=J(J+1)\dfrac{\hbar^2}{2I}$ ~~and~~ $\tilde{E}_J = \tilde{B}J(J+1)$
+		\item The rotational constant is defined as: $\tilde{B}=\dfrac{\hbar}{4\pi cI}$
+		\item States are $2J+1$-fold degenerate, with $M_J$ values ranging from $J$ to $-J$
+	\end{itemize}
+	\item Symmetric Rotors:
+	\begin{itemize}
+		\item Symmetric rotors are oblate if the unique axis has a higher moment of inertia (like a pancake)
+		\item Symmetric rotors are prolate if the unique axis has a smaller moment of inertia (like a pencil)
+		\item $E_{J_a,J_b,J_c}=\dfrac{J_b^2+J_c^2}{2I_{\perp}}+\dfrac{J_a^2}{2I_{\parallel}}$
+		\item These energies can be reframed in terms of total angular momentum and the projection onto the principal axis
+		\item $\tilde{E}_{J,K}=\tilde{B}J(J+1)+\left(\tilde{A}-\tilde{B}\right)K^2$ ~~with~~ $J=0,1,2,\ldots$ ~~and~~ $K = 0, \pm 1, \ldots , \pm J$
+		\item $\tilde{A}=\dfrac{\hbar}{4\pi cI_{\parallel}}$ ~~and~~ $\tilde{B} = \dfrac{\hbar}{4\pi cI_{\perp}}$
+		\item When $K=\pm J$ rotation is primarily about the unique axis, when $K=0$ rotation is entirely about the other axes
+		\item $K$ is not the same as $M_J$. $M_J$ does not affect the energy of a state while $K$ does
+		\item States are $2J+1$-fold degenerate for states with $K=0$, and $2(2J+1)$-fold degenerate for states with $K\neq0$
+	\end{itemize}
+	\item Centrifugal distortion is a correction which accounts for the fact that bonds stretch with higher rotational excitations
+	\item $\tilde{E}_J = \tilde{B}J(J+1)-\tilde{D}_J J^2(J+1)^2$ 
+	\item $\tilde{D}_J = \dfrac{4\tilde{B}^3}{\tilde{\nu}^2}$ ~~where $\tilde{\nu}$ is the vibrational wavenumber
+\end{itemize}
+
+\section{Rotational Spectroscopy}
+\begin{itemize}
+	\item Pure rotational spectra are in the microwave region
+	\begin{itemize}
+		\item Microwave spectra require a permanent dipole (\ch{H2}, for example, has no microwave spectrum)
+		\item Rotational transitions occur only between adjacent levels due to the conservation of angular momentum
+		\item The selection rules are: $\Delta J=\pm 1$, $\Delta M_J=0,\pm1$, and $\Delta K=0$
+		\item These selection rules make the transition energies (for all rotor types): 
+		
+		$E_{J+1}-E_J = 2\tilde{B}(J+1) - \tilde{D}_J(J+1)^3$
+		\item Recall that the degeneracy of rotational states is: $g_J=2J+1$		
+		\item States will be populated according to the Boltzmann formula: $N_J\propto g_Je^{\nicefrac{E_J}{k_BT}}$
+		\item We can find the maximum of this function to give the most populated state: $J_{max}=\left(\dfrac{k_BT}{2hc\tilde{B}}\right)^{\nicefrac{1}{2}}-\dfrac{1}{2}$
+		\item Analyze the pure rotational spectrum of CO
+		\begin{itemize}
+			\item Find $\tilde{B}$ and the bond length
+			\item Try to find $\tilde{D}_J$ and $\tilde{\nu}$
+			\item Find the rotational temperature by modeling the spectrum
+		\end{itemize}
+	\end{itemize}
+\end{itemize}
+
+\section{Vibrational Spectroscopy of Diatomic Molecules}
+\begin{itemize}	
+	\item Recall that for an harmonic oscillator: $E_v=\left(v+\frac{1}{2}\right)\hbar\omega$ ~~with~~ $\omega = \left(\dfrac{k_f}{m_{eff}}\right)^{\nicefrac{1}{2}}$
+	\item And in wavenumbers: $\tilde{E}_v=\left(v+\frac{1}{2}\right)\tilde{\nu}$ ~~with~~ $\tilde{\nu} = \dfrac{1}{2\pi c}\left(\dfrac{k_f}{m_{eff}}\right)^{\nicefrac{1}{2}}$
+	\item Infrared vibrational spectra
+	\begin{itemize}
+		\item The vibrational selection rule is that $\Delta v=\pm 1$
+		\item This gives transition energies of:
+		
+		$E_{v+1}-E_{v} = \hbar\omega$ ~~or (in wavenumbers)~~ $\tilde{E}_{v+1}-\tilde{E}_v = \tilde{\nu}$
+		\item This would place all transitions at the same energy!
+		\item Real molecules are not \emph{harmonic} oscillators, which leads to vibrational levels which get closer together at $v$ increases
+		\item A common approximation for a real potential well is called a Morse oscillator
+		\item The deviation from harmonicity can be characterized by the anharmonicity constant
+		
+		$x_e = \dfrac{\tilde{\nu}}{4\tilde{D}_e}$ ~~where $\tilde{D}_e$ is the equlibrium bond dissociation energy (See figure 12D.5)
+		\item The vibrational energies are now: $\tilde{E}_v = \left(v+\frac{1}{2}\right)\tilde{\nu} - \left(v+\frac{1}{2}\right)^2x_e\tilde{\nu}$
+		\item And the transition energies are: $\tilde{E}_{v+1}-\tilde{E}_v = \tilde{\nu} -2\left(v+1\right)x_e\tilde{\nu}$
+		\item A Birge-Sponer plot approximates the equilibrium bond dissociation energy by taking the integral of a curve of transition energies vs $\left(v+\frac{1}{2}\right)$ (See figure 12D.8)
+	\end{itemize}
+	\item Ro-vibrational spectra
+	\begin{itemize}
+		\item We have been talking only about the fundamental transition energies, but all vibrational spectroscopy also includes rotational states
+		\item The rotational selection rules are: $\Delta J=\pm 1$, $\Delta M_J=0,\pm1$, and $\Delta K=0$
+		\item The three brances are labeled as $P$ ($\Delta J=1$), $Q$ ($\Delta J=0$), and $R$ ($\Delta J=-1$)
+		\item A $Q$ branch is only present for molecules with a degenerate vibration which carries angular momentum (such as \ch{CO2})
+	\end{itemize}
+	\item Raman spectroscopy
+	\begin{itemize}
+		\item Raman doesn't require a permanent dipole, but it does require anisotropically polarizable molecules (that is any non-spherical rotors)
+		\item For Raman spectroscopy, two photons are ultimately involved, giving new selection rules
+		\item $\Delta J = 0, \pm 2$ for linear rotors, and $\Delta J=0,\pm1,\pm2$ with $\Delta K=0$ for symmetric rotors
+		\item The three brances are labeled as $O$ ($\Delta J=-2$), $Q$ ($\Delta J=0$), and $S$ ($\Delta J=+2$)
+		\item We can also call the $O$ branch ``Stokes lines'' and the $S$ branch ``Anti-Stokes lines''
+		\item See figure 12D.14 for the Raman spectrum of CO
+	\end{itemize}
+\end{itemize}
+
+\section{Vibrational Spectroscopy of Polyatomic Molecules}
+\begin{itemize}
+	\item Polyatomic molecules don't vibrate at a single bond, but rather the whole molecule vibrates in what is called a normal mode
+	\item The number of normal modes is: $3N-5$ for linear molecules and $3N-6$ for nonlinear molecules
+	\item Modes can involve stretches, bends, and twists
+	\item Some modes are distributed throughout the molecule, while others are largely localized
+	\item Table 12E.1 (resource section) gives typical vibrational energies for localized vibrations
+	\item In addition to identifying functional groups, and IR spectrum can be compared to a database for compound identification
+	\item In condensed phases (liquid, aqueous), rotations cannot be resolved and vibrational transitions are relatively broad
+	\item Raman vibrational spectroscopy -- A coherent technique
+	\begin{itemize}
+		\item Because Raman is a coherent technique, there are many ways to get further information from the spectrum
+		\item Depolarization: Raman scatter from symmetric modes will preserve the incident polarity. All others will scatter depolarized light
+		\item Resonance Raman: By tuning the visible light near to a resonant electronic transition, the scattering intensity can be enhanced. This is useful for getting signal selectively from one component of a mixture
+		\item Coherent anti-Stokes Raman Spectroscopy (CARS): CARS can give a spatially coherent output beam, making it easier to separate from fluorescence or incandescence in the sample
+	\end{itemize}
+	\item Remember, modes which belong to the same irreducible representation as linear terms are IR active, while those which belong to the same irreducible representations as quadratic terms are Raman active
+\end{itemize}
+
+\chapter{Electronic Transitions}
+\section{Electronic Spectra}
+\begin{itemize}
+	\item Electronic transitions in gas phase can resolve vibrational structure, but condensed phases have broad bands instead
+	\item Recall that atoms have electronic states characterized by term symbols, such as $^3P$
+	\item Molecules also have electronic states characterized by term symbols
+	\begin{itemize}
+		\item Molecular terms use Greek letters
+		\item $\Lambda$ is the orbital angular momentum about the bond axis and $\Sigma$ is the total spin (note that this will be different from the term $\Sigma$)
+		\item $\Sigma$ is for $\Lambda=0$, $\Pi$ is for $\Lambda = \pm 1$, $\Delta$ is for $\Lambda = \pm2$, etc.
+		\item Electronic configurations build up to molecular term symbols in much the same way that atomic configurations do
+		\item Consider the terms that arise from the following configurations: $\sigma_g^1$ ($^2\Sigma$), $\pi_u^1$ ($^2\Pi$), or $\pi_u^2$ ($^3\Sigma$ and $^1\Delta$)
+		\item Terms for molecules with inversion symmetry are also labeled with $_g$ and $_u$ symmetry, calculated as a product of the symmetries of each electron
+		\item Symmetry across a reflecting plane which includes the bond axis gives labels $^+$ and $^-$
+		\item When spin-orbit coupling is strong, $\Omega$ is calculated just like $J$ (i.e. $\Omega = \Lambda + \Sigma$)
+	\end{itemize}
+	\item Electronic transitions for molecules follow selection rules:
+	\begin{itemize}
+		\item $\Delta \Lambda = 0, \pm 1$
+		\item $\Delta S = 0$
+		\item $\Delta \Sigma = 0$
+		\item $\Delta \Omega = 0,\pm1$
+		\item For $\Sigma$ terms, only $\Sigma^+\leftrightarrow\Sigma^+$ or $\Sigma^-\leftrightarrow\Sigma^-$ are allowed
+		\item For centrosymmetric molecules, only $u\leftrightarrow g$ transitions are allowed (Laporte rule)
+		\item Forbidden $g\leftrightarrow g$ and $u\leftrightarrow u$ transitions can become allowed if they simultaneously excite an asymmetric vibration (thus destroying $i$ symmetry). This is called a vibronic transition
+	\end{itemize}
+	\item Electronic spectra of gas phase molecules includes vibrational structure
+	\begin{itemize}
+		\item Franck-Condon Principle: Electronic transitions take place much faster then nuclear motions can respond
+		\item That is, if an excited electronic state has a different bond length, the bond length will respond only after the electrons assume their new configuration
+		\item Electronic transitions are said to be \emph{vertical}, meaning nuclei do not initially move
+		\item The wavefunctions of the initial and final states must overlap for a transition to be efficient (Figure 13A.7)
+		\item This requirement leads to Franck-Condon factors: $\abs{S(v_f,v_i)}^2 = \left(\int\psi_{v_f}^*\psi_{v_i}\mathrm{d}\tau\right)^2$
+	\end{itemize}
+	\item Rotational structure
+	\begin{itemize}
+		\item In the gas phase, with an instrument of sufficiently high resolution, rotational structure can be resolved as well!
+		\item Since the transition involves vibrational states from two different potential wells, there is a good deal more complexity in the branch structure
+		\item P-branch ($\Delta J = -1$): $\tilde{\nu}_P(J) = \tilde{\nu}-\left(\tilde{B}^\prime + \tilde{B}\right)J + \left(\tilde{B}^\prime - \tilde{B}\right)J^2$
+		\item Q-branch ($\Delta J = 0$): $\tilde{\nu}_Q(J) = \tilde{\nu} + \left(\tilde{B}^\prime - \tilde{B}\right)J(J+1)$
+		\item R-branch ($\Delta J=1$):  $\tilde{\nu}_R(J) = \tilde{\nu}-\left(\tilde{B}^\prime + \tilde{B}\right)(J+1) + \left(\tilde{B}^\prime - \tilde{B}\right)(J+1)^2$
+		\item Often, the P branch (where $\tilde{B}^\prime>\tilde{B}$) or R branch (where $\tilde{B}^\prime < \tilde{B}$) will curve around on itself, forming a branch  head (Figure 13A.10)
+	\end{itemize}
+	\item For polyatomic molecules, many molecular orbitals are spread out over the whole molecule, but others are highly localized around significant moieties, such as a carbonyll
+	\item These moieties give rise to characteristic absorption peaks just like local vibrational modes do (Table 13A.2)
+	\item Ligand Field Theory:
+	\begin{itemize}
+		\item d-Metal complexes will have the central metals d-orbitals split by the electronic environment of the ligands		
+		\item Octahedral geometry places the $t_{2g}$ triplet of states below the $e_g$ pair
+		\item Tetrahedral geometry places the $e$ pair of states below the $t_2$ triplet
+		\item The ligand-field splitting parameter ($\Delta_O$ for octahedral geometry, and $\Delta_T$ for tetrahedral geometry) is the $d\rightarrow d$ transition energy, and usually in the visible range
+		\item Though these transitions are formally forbidden by several rules, they become possible as vibronic transitions
+		\item metal complexes also have visible light transitions in the form of ligand-to-metal charge transfer (LMCT) and metal-to-ligand charge transfer (MLCT)
+		\item A LMCT transition is responsible for permanganate's vivid color
+	\end{itemize}
+\end{itemize}
+
+\section{Decay of Excited States}
+\begin{itemize}
+	\item Fluorescence and phosphorescence are both spontaneous emission processes, but phosphorescence occurs over much longer time scales	
+	\item Radiationless decay to the ground vibrational state makes fluorescence red-shifted from absorption
+	\item For well-resolved vibrational structure (i.e. gas phase), the absorption spectrum gives the vibrational structure of the excited electronic state, and the fluorescence spectrum gives the vibrational structure of the ground electronic state (Figures 13B.2 and 13B.3)
+	\item For condensed phases, there might be an even greater red shift due to solvent/neighbor reorganization (Figure 13B.4)
+	\item Phosphorescence is caused by an inter-system crossing (Figure 13B.5)
+	\item A Jablonski diagram (Figure 13B.6) shows all the various transitions possible within and between spin systems
+	\item Electronic transitions will lose vibrational structure and transition into a continuum when the excited state exceeds the bond dissociation energy (Figure 13B.7)
+	\item If an unbound state crosses the excited state, then predissociation can be observed near the crossing point (Figure 13B.8)
+\end{itemize}
+
+\section{Lasers}
+\begin{itemize}
+	\item Lasers have many useful properties, as summarized in Table 13C.1
+	\item Lasers rely on a population inversion, which makes a resonant photon more likely to stimulate emission than to be absorbed (Figure 13C.5)
+	\item Population inversion is only possible for systems with at least a third, metastable state (Figures 13C.1 and 13C.2)
+	\item For a laser cavity, standing waves are built up within the cavity. Those standing waves must match the cavity length like vibrations on a guitar string: $n\frac{1}{2}\lambda=L$
+	\item Any practical laser will have many longitudinal cavity modes
+	\item There are also transverse laser modes, though many lasers seek to emit only in a single mode
+	\item Laser light is also \emph{coherent} both spatially and temporally
+	\item Spatial coherence is characterized by the coherence length: $l_C=\dfrac{\lambda^2}{2\Delta \lambda}$
+	\item Very spectrally sharp lasers will spread more slowly than broadband lasers
+	\item Materials with very high gains are ``superluminous,'' and may operate without a cavity at all
+	\item Pulsed Lasers:
+	\begin{itemize}
+		\item It is useful sometimes to produce laser pulses rather than a continuous laser beam
+		\item Q-switching:
+		\begin{itemize}
+			\item Q-switching is a way to achieve a very high power short (nanosecond) pulses
+			\item A laser will begin to lase at a certain threshold level of population inversion, and remain at that threshold
+			\item “Spoiling” the cavity will require a higher threshold before lasing, and so a higher population inversion can be achieved with a poor cavity
+			\item Suddenly switching the cavity to a good one will immediately dump out all of that excess energy in one big pulse
+			\item Switching is achieved by AOMs, Pockel's Cells, and perhaps other means
+		\end{itemize}
+		\item Mode-locking:
+		\begin{itemize}
+			\item Mode-locking gives the very shortest pulses on the Earth (43 attoseconds!)
+			\item A lasing medium with a broad bandwidth will produce many, many closely spaced longitudinal modes
+			\item Generally, each mode will have its own phase
+			\item If all of the phases could be lined up, then a single sharp pulse would be produced (See spreadsheet)
+			\item In practice, mode-locking can be achieved by an AOM, end-mirror fibrillation, a Kerr Medium, a saturable absorber, or other means
+		\end{itemize}
+		\item Figure 13C.10 shows a time-resolved (pump-probe) spectrum
+	\end{itemize}
+	\item Practical lasers:
+	\begin{itemize}
+		\item HeNe lasers (Figure 13C.12) pump the He through electric discharge, which transfers energy to Ne though collisions. Ne lases at many frequencies, but  633 nm is prominent
+		\item Argon Ion lasers (Figure 13C.13, and in our research lab) ionize Ar gas through electric discharge, which then relaxes to new electronic states and emits red and UV light
+		\item \ch{CO2} lasers (Figure 13C.14) excite \ch{N2} through electric discharge, and transfer that energy to \ch{CO2} through collisions. The \ch{CO2} lases in the infrared as the antisymmetric stretch decays into the symmetric stretch. Collisions with He depletes the symmetric stretch to maintain a population inversion
+		\item Exciplex lasers (Figure 13C.15) have a dissociative ground electronic state, but a bound excited electronic state. After electric discharge bound complexes form. Once they emit, they immediately fall apart, thus maintaining the population inversion
+		\item Dye lasers use a fluorophore in solution with a broad fluorescence spectrum. By introducing a grating into the cavity, a tunable narrowband laser can be produced. Fluorophores can also be swapped out to give a very wide range of possible colors from a single laser apparatus
+		\item Ti:sapphire lasers (vibronic lasers) are very broadband lasers due to vibronic transitions in the crystal lattice (Figure 13C.17). These lasers are well suited for mode-locking
+	\end{itemize}
+\end{itemize}
+
+\chapter{Magnetic Resonance}
+For this chapter, I lectured without following the book sections
+
+\chapter{Statistical Thermodynamics}
+\section{The Boltzmann Distribution}
+\begin{itemize}
+	\item Energy can be distributed between molecules and energetic degrees of freedom in many different ways
+	\item We assume that energy and temperature are the only important factors
+	\item A particular division of energy between different levels is called a configuration
+	\item The weight of a configuration is the number of ways a particular configuration can be achieved (considering the indistinguishability of molecules): 
+	
+	$\mathcal{W} = \dfrac{N!}{N_0!N_1!N_2!\ldots}$
+	\item Try with the configurations \{0,2,0,0\} and \{1,0,1,0\}, which have equal energy ()
+	\item Figure 15A.2 gives another example
+	\item It will be convenient to find the natural log of $\mathcal{W}$, which is:
+	
+	$\ln\mathcal{W} = \ln N! - \sum \ln N_i!$
+	\item Here, Sterling's approximation is useful: $\ln x! \approx x\ln x - x$
+	\item For a fixed energy $E$ and a fixed total number of particles $N$, there may be many different configurations
+	\item The configuration with the greatest weight is the most probably configuration
+	\item The distribution in this most probable configuration (greatest $\mathcal{W}$) is the Boltzmann distribution:
+	
+	$\dfrac{N_i}{N}=\dfrac{e^{-\beta \epsilon_i}}{\displaystyle\sum\limits_j e^{-\beta \epsilon_j}}$ \hspace{2em} $\beta = \left(kT\right)^{-1}$
+	\item The denominator is also called the partition function: $q = \displaystyle\sum\limits_j e^{-\beta \epsilon_j}$
+	\item If we want to consider energy levels with degenerate states, then we add the degeneracy to both the Boltzmann distribution and the partition function:
+	
+	$\dfrac{N_i}{N}=\dfrac{g_ie^{-\beta \epsilon_i}}{\displaystyle\sum\limits_j g_je^{-\beta \epsilon_j}}$ \hspace{2em}  $q = \displaystyle\sum\limits_j g_je^{-\beta \epsilon_j}$	
+\end{itemize}
+\section{Molecular Partition Functions}
+\begin{itemize}
+	\item For a single molecule, the partition function should include all energetic degrees of freedom
+	\item $q=q^Tq^Rq^Vq^E$
+	\item For translations, we can define a thermal wavelength: $\Lambda = \dfrac{h}{\sqrt{2\pi mk_BT}}$
+	\item $q^T$ can be calculated two ways: $q^T = \left(\dfrac{2\pi m}{h^2\beta}\right)^{\nicefrac{3}{2}}L_xL_yL_z = \dfrac{V}{\Lambda^3}$
+\end{itemize}
+
+\chapter{Molecular Interactions}
+\section{Electric Properties of Molecules}
+\begin{itemize}
+	\item A point electric dipole is an electric dipole where the distance between charges is small compared to the distance to the observer
+	
+	$\mu = QR$
+	\item The SI unit is clumsy, so we use the Debye instead: $1~D=3.335\times10^{-30}~Cm$
+	\item Table 16A.1 shows the dipole magnitutde for some common molecules
+	\item Figure 16A.1 shows how polar bonds can add up to make an overall molecular dipole
+	\item A non-polar molecule may nevertheless contain a quadrupole or octupole
+	\item Figure 16A.2 shows different configurations which lead to multipoles
+	\item Polarizability measures the electronic response to an electric field
+	\begin{itemize}
+		\item Think of it as the squishiness of an electron cloud (beach ball vs. basketball)
+		\item $\mu^* = \alpha\mathcal{E}$
+		\item In reality, the induced dipole is a Taylor series: $\mu^* = \alpha\mathcal{E} + \frac{1}{2}\beta\mathcal{E}^2+\cdots$
+		\item Here, $\alpha$ is called the polarizabilty and $\beta$ is called the hyperpolarizability
+		\item Polarizability has strange units $\left(\dfrac{C^2m^2}{J}\right)$, so instead we sometimes use the polarizability volume
+		
+		$\alpha^\prime = \dfrac{\alpha}{4\pi\epsilon_0}$
+		\item $\alpha^\prime$ is on the scale of actual molecular volumes
+	\end{itemize}
+	\item Polarization is the dipole moment density for an ensemble in an electric field
+	\begin{itemize}
+		\item $P=\avg{\mu}\mathcal{N}$
+		\item Now $\avg{\mu}$ is not actually the same as $\mu$ because thermal fluctuations prevent all molecules from lining up perfectly with the electric field
+		\item $\avg{\mu_z}=\dfrac{\mu^2\mathcal{E}}{3k_BT}$
+		\item This equation is only valid for a constant electric field, and note the temperature dependence
+		\item Changing electric fields (like light waves) will induce smaller and smaller polarizations as the frequency increases
+		\item Orientation polarization is caused by the physical orientation of a molecule's permanent dipole. The orientation polarization is lost in the microwave region of the spectrum, as molecules are able to tumble faster than the period of the electric field itself
+		\item Distortion polarization is from changes in the shape of the molecules. This polarization is lost in the infrared region of the spectrum, as the molecules vibrations dominate any distortions on that time scale
+	\end{itemize}
+\end{itemize}
+
+\section{Interactions Between Molecules}
+\begin{itemize}
+	\item The attraction between two charges is the Coulomb potential: $V=\dfrac{Q_1Q_2}{4\pi\epsilon r}$
+	\item A charge-dipole interaction is different because the dipole has both positive and negative charge
+	\item $V=-\dfrac{\mu_1Q_2}{4\pi\epsilon_0 r^2}$
+	\item Two dipoles aligned together have the potential: $V=-\dfrac{\mu_1\mu_2}{2\pi\epsilon_0r^3}$
+	\item And two dipoles which rotate freely have the potential: $\avg{V}=-\dfrac{C}{r^6}$ ~~where~~ $C=\dfrac{2\mu_1^2\mu_2^2}{3\left(4\pi\epsilon_0\right)^2k_BT}$
+	\item For multipoles, $V\propto\dfrac{1}{r^{n+m-1}}$ ~~where $n$ and $m$ are the orders of the multipoles
+	\item For dipole-induced dipole interactions: $V = -\dfrac{C}{r^6}$ ~~where~~ $C=\dfrac{\mu_1^2\alpha_2^\prime}{4\pi\epsilon_0}$
+	\item Finally, the London forces have $V=-\dfrac{C}{r^6}$ ~~where~~ $C=\frac{3}{2}\alpha_1^\prime\alpha_2^\prime\dfrac{I_1I_2}{I_1+I_2}$ ~~and $I$ are the ionization energies
+	\item Table 16B.1 summarizes and compares these intermolecular interactions
+\end{itemize}
+
+\section{Liquids}
+\begin{itemize}
+	\item We are almost out of time for this semester, so I only want to cover a few basics
+	\item Figure 16C.1 shows the radial distribution function of oxygen atoms in liquid water
+	\item Surface Tension:
+	\begin{itemize}
+		\item Changing the surface area of a liquid can do work just like $PV$ work: $\mathrm{d}w = \gamma\mathrm{d}\sigma$
+		\item Because liquids are incompressible, the volume is constant and this can also be taken as a Helholtz energy: $\mathrm{d}A = \gamma\mathrm{d}\sigma$
+		\item Energy is minimized and work is done by a liquid contracting into a curved droplet to minimize its surface area
+		\item The laplace equation relates the pressures on either side of the interface in a bubble, droplet, or cavity
+		
+		$p_{in}=p_{out}+\dfrac{2\gamma}{r}$
+		\item A capillary will draw a liquid up to a height of: $h=\dfrac{2\gamma}{\rho gr}$ ~~where~~ $r$ is the radius of the capillary
+		\item Surface tension can be measured by the contact angle of a droplet on a surface:
+		
+		$w_{ad}=\gamma_{sg}+\gamma_{lg}-\gamma_{sl}$ ~~and~~ $\cos\theta_c=\dfrac{w_{ad}}{\gamma_{lg}}-1=\dfrac{\gamma_{sg}-\gamma_{sl}}{\gamma_{lg}}$
+		\item S will concentrate at the surface giving a surface excess of: 
+		
+		$\Gamma_J=\dfrac{n_J(\sigma)}{\sigma}$ ~~where~~ $n_J(\sigma) = n_J - \left(n_J(\alpha)+n_J(\beta)\right)$
+		\item And the surface tension changes by concentration according to: $\left(\dfrac{\partial\gamma}{\partial c}\right)_T=-\dfrac{RT\Gamma_S}{c}$
+	\end{itemize}
+	\item Finally, we have the Kelvin equation which gives vapor pressures for curved surfaces (which are greater than the pressure for a flat, pure substance)
+	
+	$p=p^\star e^{\nicefrac{2\gamma V_m}{rRT}}$
+	\item The Kelvin equation predicts that any droplet below a certain size will vaporize away, even if the relative humidity is $>100\%$
+\end{itemize}
+\end{document}
