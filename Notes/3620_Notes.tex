@@ -246,11 +246,11 @@
 		 \item There is a zero-point energy of $\dfrac{h^2}{8mL^2}$
 		 \item This model can be extended to multiple dimensions with:
 		 
-		 $\psi_{n_x,n_y}(x,y) =\dfrac{2}{\sqrt{L_xL_y}}\sin\left(\dfrac{n_x\pi x}{L_x}\right)\sin\left(\dfrac{n_y\pi y}{L_y}\right)$ with $E_{n_x,n_y}=\dfrac{h^2}{2m}\left(\dfrac{n_x^2}{L_x^2}+\dfrac{n_y^2}{L_y^2}\right)$
+		 $\psi_{n_x,n_y}(x,y) =\dfrac{2}{\sqrt{L_xL_y}}\sin\left(\dfrac{n_x\pi x}{L_x}\right)\sin\left(\dfrac{n_y\pi y}{L_y}\right)$ with $E_{n_x,n_y}=\dfrac{h^2}{8m}\left(\dfrac{n_x^2}{L_x^2}+\dfrac{n_y^2}{L_y^2}\right)$
 		 
 		 $\psi_{n_x,n_y,n_z}(x,y,z) =\sqrt{\dfrac{8}{L_xL_yL_z}}\sin\left(\dfrac{n_x\pi x}{L_x}\right)\sin\left(\dfrac{n_y\pi y}{L_y}\right)\sin\left(\dfrac{n_z\pi z}{L_z}\right)$
 		 
-		 with $E_{n_x,n_y,n_z}=\dfrac{h^2}{2m}\left(\dfrac{n_x^2}{L_x^2}+\dfrac{n_y^2}{L_y^2}+\dfrac{n_z^2}{L_z^2}\right)$
+		 with $E_{n_x,n_y,n_z}=\dfrac{h^2}{8m}\left(\dfrac{n_x^2}{L_x^2}+\dfrac{n_y^2}{L_y^2}+\dfrac{n_z^2}{L_z^2}\right)$
 		 \item The wavefunctions for 2 and 3 dimensions are 2 and 3 dimensional sin functions
 		 \item Note that for 2 and 3 dimensions, the energy spacings are more complex and include some degenerate energy levels		 
 	\end{itemize}
@@ -261,7 +261,7 @@
 		\item Such a barrier is called a “classically forbidden region,” and within them the wavefunction decays exponentially $\psi\propto e^{-\kappa x}$
 		\item The decay constant is: $\kappa = \dfrac{\sqrt{2m(V-E)}}{\hbar}$, so more massive particles tunnel with less efficiency
 		\item Figure 8A.9 illustrates the wavefunction decay and transmission through a classically forbidden region
-		\item The transmission probability is: $T=\left[1+\dfrac{\left(e^{\kappa L}-e^{-\kappa L}\right)^2}{16\varepsilon(1-\varepsilon)}\right]^{\nicefrac{1}{2}}$
+		\item The transmission probability is: $T=\left[1+\dfrac{\left(e^{\kappa L}-e^{-\kappa L}\right)^2}{16\varepsilon(1-\varepsilon)}\right]^{-1}$
 		\item Here, $L$ is the barrier width, and $\varepsilon=\dfrac{E}{V}$
 		\item Note that even when $E>V$, there is still a probability of scattering backward
 	\end{itemize}
