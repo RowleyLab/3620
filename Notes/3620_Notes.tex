@@ -1050,15 +1050,62 @@
 \end{itemize}
 
 \chapter{Magnetic Resonance}
-For this chapter, I lectured without following the book sections
-
-\section{General Principles}
-
+For this chapter, I lectured without following the book sections very closely, as they get very technical and lost in obscure formulas, etc.
+\section{General Principles (my version)}
+\begin{itemize}
+	\item Nuclei have quantum mechanical spin just like electrons do.
+	\item The spin states are normally equal in energy, but a strong magnetic field can split them, Fig. 12A.1 (Zeeman effect)
+	\item NMR and EPR spectroscopy probe transitions between nuclear and electric spin states
+	\item Tables 12A.1 and 12A.2 give some information about nuclear spins for a few elements
+	\item Figures 12A.3 and 12A.5 show the anatomy of NMR and EPR instruments
+\end{itemize}
 \section{Features of NMR Spectra}
-
+\begin{itemize}
+	\item All nuclei of the same type have transition in the same neighborhood, but we have very fine resolution with NMR so we can see very slight shifts in transition frequency
+	\item Shielding and chemical shift
+	\begin{itemize}
+		\item The local electronic environment can shift the transition energy
+		\item Solvent arrangement, conformational changes, etc. will tend to smear out all transitions a bit with \emph{homogeneous} broadening
+		\item Permanent differences, like the presence of electron-withdrawing moieties on a molecule, will produce peaks at clearly resolvable different frequencies
+		\item Groups of atoms in the same environment will have transitions at the same frequency (consider the two groups of Hs in methanol)
+		Figure 12B.1 shows regions of chemical shift for H and C in common environments, and Figure 12B.2 shows a simple spectrum
+	\end{itemize}
+	\item Spin coupling between groups is a source of fine structure in NMR spectra
+	\begin{itemize}
+		\item Nearby groups (such as Hs on adjacent Cs) can have their spins correlated or anti-correlated to produce a multiplet of transitions
+		\item Figure 12B.10 shows an energy level diagram for AX-coupling, and figure 12B.11 shows the resulting spectrum
+		\item With more nuclei involved in the coupling, the multiplets become more complex (Figures 12B.13 and 12B.14)
+		\item The peak heights can be predicted by Pascal's triangle
+		\item The multiplet splitting spacing shows the strength of coupling between groups, and so corresponding multiplets should have equal spacings
+		\item Figures 12B.8 and 12B.22 shows a simple spectrum with fine structure
+		\item With neighbors on both sides, we can see doublets of triplets, etc.
+		\item A multiplet can be collapsed into a single peak at its center by decoupling pulse sequences (covered in the next section)
+	\end{itemize}
+	
+\end{itemize}
 \section{Pulse Techniques in NMR}
-
+\begin{itemize}
+	\item Modern NMR is almost always done using a ``time-domain'' or Fourier transform method
+	\item Classical view and precession (Fig. 12A.2, and gyroscope demo)
+	\item The precession produces a literal radio wave, which we can collect and analyze with a receiver antenna
+	\item FID signal
+	\begin{itemize}
+		\item First, a sample is excited by a broadband radio pulse
+		\item The free-induction decay signal is captured. Figure 12C.6
+		\item The frequency of the FID signal is the transition frequency, so the FID signal can be transformed into a spectrum (Figure 12C.8)
+	\end{itemize}
+	\item Spin relaxation (How long the FID signal lasts)
+	\begin{itemize}
+		\item Resolution is limited by how long the FID signal persists
+		\item This can be literally seconds for H spectra, which is kind of incredible!
+		\item The FID signal drops due to 2 factors: Population relaxation, and decoherence
+		\item Decoherence is caused by homogeneous and inhomogeneous effects
+		\item 
+	\end{itemize}
+\end{itemize}
 \section{Electron Paramagnetic Resonance}
+
+
 
 \chapter{Statistical Thermodynamics}
 \section{The Boltzmann Distribution}
