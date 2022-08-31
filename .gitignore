@@ -1,7 +1,6 @@
 *.log
-*~
 *.aux
-*.gz
 *.out
-/Homework_Keys/*
-*(busy)
+*.gz
+*.fdb_latexmk
+*.fls
