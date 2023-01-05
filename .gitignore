@@ -4,3 +4,5 @@
 *.gz
 *.fdb_latexmk
 *.fls
+*.synctex*
+Homework_Keys/*

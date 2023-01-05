@@ -4,68 +4,70 @@ import calendar
 import numpy as np
 
 #  Change these values to generate a new course schedule
-year = 2018
+year = 2021
 # Format is [month, day]
-start = [1, 8]
-end = [4, 26]
+start = [1, 11]
+end = [4, 25]
 
 # 0-M, 1-T, 2-W, 3-R, 4-F, 5-S, 6-S
 Days = [0, 2, 4]
 
 # Format is (month, day): 'Holiday Name'
-Holidays = {(1, 15): 'Martin Luther King Day',
-            (2, 19): "President's Day",
-            (3, 12): 'Spring Break',
-            (3, 14): 'Spring Break',
-            (3, 16): 'Spring Break',
-            (4, 3): 'Festival of Excellence'
+Holidays = {(1, 18): 'Martin Luther King Day',
+            (2, 15): "President's Day",
+            (3, 1): 'Spring Break',
+            (3, 3): 'Spring Break',
+            (3, 5): 'Spring Break',
+            (3, 31): 'Festival of Excellence'
             }
 
 # Format is ['title', 'chapter', length] for topics
 # Format is ['Exam #'] for midterm exams
 
 Topics = [['The Origins of Quantum Mechanics', '7A', 1],
-          ['Dynamics of Microscopic Systems', '7B', 1],
-          ['The Principles of Quantum Theory', '7C', 1],
+          ['Wavefunctions', '7B', 1],
+          ['Operators and Observables', '7C', 1],
           ['Experiments and Interpretations in QM', '**', 1],
-          ['Translation', '8A', 1],
-          ['Vibrational Motion', '8B', 1],
-          ['Rotational Motion', '8C', 1],
-          ['Midterm Exam 1 (Ch. 7--8)'],
-          ['Hydrogenic Atoms', '9A', 1],
-          ['Many Electron Atoms', '9B', 1],
-          ['Atomic Spectra', '9C', 1],
-          ['Valence-Bond Theory', '10A', 1],
-          ['Principles of Molecular Orbital Theory', '10B', 1],
-          ['Homonuclear Diatomic Molecules', '10C', 1],
-          ['Heteronuclear Diatomic Molecules', '10D', 1],
-          ['Polyatomic Molecules', '10E', 1],
-          ['Midterm Exam 2 (Ch. 9--10)'],
-          ['Symmetry Elements', '11A', 1],
-          ['Group Theory', '11B', 1],
-          ['Applications of Symmetry', '11C', 1],
-          ['General Features of Molecular Spectroscopy', '12A', 1],
-          ['Molecular Rotation', '12B', 1],
-          ['Rotational Spectroscopy', '12C', 1],
-          ['Vibrational Spectroscopy of Diatomic Molecules', '12D', 1],
-          ['Vibrational Spectroscopy of Polyatomic Molecules', '12E', 1],
-          ['Spectroscopy Special Topics', '**', 1],
-          ['Electronic Spectra', '13A', 1],
-          ['Decay of Excited States', '13B', 1],
-          ['Lasers', '13C', 1],
-          ['Midterm Exam 3 (Ch. 11--13)'],
-          ['General Principles of NMR', '14A', 1],
-          ['Features of NMR Spectra', '14B', 1],
-          ['The Boltzmann Distribution', '15A', 1],
-          ['Molecular Partition Functions', '15B', 1],
-          ['Molecular Energies', '15C', 1],
-          ['The Canonical Ensemble', '15D', 1],
-          ['Internal Energy and Entropy', '15E', 1],
-          ['Derived Functions', '15F', 1],
-          ['Electric Properties of Molecules', '16A', 1],
-          ['Interactions Between Molecules', '16B', 1],
-          ['Liquids', '16C', 1],
-          ['Midterm Exam 4 (Ch. 14--16)'],
+          ['Translational Motion', '7D', 1],
+          ['Vibrational Motion', '7E', 1],
+          ['Rotational Motion', '7F', 1],
+#          ['Catch-up/Review Day -- Midterm Exam 1 (Ch. 7)'],
+          ['Hydrogenic Atoms', '8A', 1],
+          ['Many Electron Atoms', '8B', 1],
+          ['Atomic Spectra', '8C', 1],
+          ['Valence-Bond Theory', '9A', 1],
+          ['Molecular Orbital Theory: the Hydrogen Molecule-Ion', '9B', 1],
+          ['Molecular Orbital Theory: Homonuclear Diatomic Molecules', '9C', 1],
+          ['Molecular Orbital Theory: Heteronuclear Diatomic Molecules', '9D', 1],
+          ['Molecular Orbital Theory: Polyatomic Molecules', '9E', 1],
+#          ['Catch-up/Review Day -- Midterm Exam 2 (Ch. 8--9)'],
+          ['Shape and Symmetry', '10A', 1],
+          ['Group Theory', '10B', 1],
+          ['Applications of Symmetry', '10C', 1],
+          ['General Features of Molecular Spectroscopy', '11A', 1],
+          ['Rotational Spectroscopy', '11B', 1],
+          ['Vibrational Spectroscopy of Diatomic Molecules', '11C', 1],
+          ['Vibrational Spectroscopy of Polyatomic Molecules', '11D', 1],          
+          ['Electronic Spectra', '11F', 1],
+          ['Decay of Excited States', '11G', 1],
+          ['Lasers and Spectroscopy Special Topics', '**', 1],
+#          ['Catch-up/Review Day -- Midterm Exam 3 (Ch. 10--11)'],
+          ['General Principles of NMR', '12A', 1],
+          ['Features of NMR Spectra', '12B', 1],
+          ['Pulse Technique in NMR', '12C', 1],
+          ['Electron Paramagnetic Resonance', '12D', 1],
+          ['The Boltzmann Distribution', '13A', 1],
+          ['Molecular Partition Functions', '13B', 1],
+          ['Molecular Energies', '13C', 1],
+          ['The Canonical Ensemble', '13D', 1],
+          ['Internal Energy and Entropy', '13E', 1],
+          ['Derived Functions', '13F', 1],
+          ['Electric Properties of Molecules', '14A', 1],
+          ['Interactions Between Molecules', '14B', 1],
+          ['Liquids', '14C', 1],
+          ['Macromolecules and Self-Assembly', '14D-E', 1],
+        #  ['Self-Assembly', '14E', 1],
+ #         ['Catch-up/Review Day -- Midterm Exam 4 (Ch. 12--13)'],
           ]
 
 Day_Letters = ['M', 'T', 'W', 'R', 'F', 'S', 'S']
@@ -103,7 +105,7 @@ for month in range(start[0], end[0] + 1):
                 Class_Days.append([today, Holidays[(month, date)]])
 
 shortfall = len(Topics) - Total_Days
-print('Shortfall is {}'.format(shortfal))
+print('Shortfall is {}'.format(shortfall))
 #%%
 combined_times = np.ones(len(Topics))*5
 for i in range(len(Topics)-1):
@@ -229,3 +231,48 @@ Topics = [['Intro', '1', 0.75],
           ['Midterm Exam 6 (Ch. 14, 16)']
           ]
 
+
+#10th edition:
+Topics = [['The Origins of Quantum Mechanics', '7A', 1],
+      ['Dynamics of Microscopic Systems', '7B', 1],
+      ['The Principles of Quantum Theory', '7C', 1],
+      ['Experiments and Interpretations in QM', '**', 1],
+      ['Translation', '8A', 1],
+      ['Vibrational Motion', '8B', 1],
+      ['Rotational Motion', '8C', 1],
+      ['Catch-up/Review Day -- Midterm Exam 1 (Ch. 7--8)'],
+      ['Hydrogenic Atoms', '9A', 1],
+      ['Many Electron Atoms', '9B', 1],
+      ['Atomic Spectra', '9C', 1],
+      ['Valence-Bond Theory', '10A', 1],
+      ['Principles of Molecular Orbital Theory', '10B', 1],
+      ['Homonuclear Diatomic Molecules', '10C', 1],
+      ['Heteronuclear Diatomic Molecules', '10D', 1],
+      ['Polyatomic Molecules', '10E', 1],
+      ['Catch-up/Review Day -- Midterm Exam 2 (Ch. 9--10)'],
+      ['Symmetry Elements', '11A', 1],
+      ['Group Theory', '11B', 1],
+      ['Applications of Symmetry', '11C', 1],
+      ['General Features of Molecular Spectroscopy', '12A', 1],
+      ['Molecular Rotation', '12B', 1],
+      ['Rotational Spectroscopy', '12C', 1],
+      ['Vibrational Spectroscopy of Diatomic Molecules', '12D', 1],
+      ['Vibrational Spectroscopy of Polyatomic Molecules', '12E', 1],
+      ['Spectroscopy Special Topics', '**', 1],
+      ['Electronic Spectra', '13A', 1],
+      ['Decay of Excited States', '13B', 1],
+      ['Lasers', '13C', 1],
+      ['Catch-up/Review Day -- Midterm Exam 3 (Ch. 11--13)'],
+      ['General Principles of NMR', '14A', 1],
+      ['Features of NMR Spectra', '14B', 1],
+      ['The Boltzmann Distribution', '15A', 1],
+      ['Molecular Partition Functions', '15B', 1],
+      ['Molecular Energies', '15C', 1],
+      ['The Canonical Ensemble', '15D', 1],
+      ['Internal Energy and Entropy', '15E', 1],
+      ['Derived Functions', '15F', 1],
+      ['Electric Properties of Molecules', '16A', 1],
+      ['Interactions Between Molecules', '16B', 1],
+      ['Liquids', '16C', 1],
+      ['Catch-up/Review Day -- Midterm Exam 4 (Ch. 14--16)'],
+      ]
