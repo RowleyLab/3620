@@ -4,10 +4,10 @@ import calendar
 import numpy as np
 
 #  Change these values to generate a new course schedule
-year = 2023
+year = 2025
 # Format is [month, day]
-start = [1, 9]
-end = [4, 23]
+start = [1, 8]
+end = [4, 18]
 
 # 0-M, 1-T, 2-W, 3-R, 4-F, 5-S, 6-S
 Days = [0, 2, 4]
@@ -30,24 +30,25 @@ Days = [0, 2, 4]
 #             }
 # Spring Holidays
 Holidays = {
-    (1, 16): "Martin Luther King Day",
-    (2, 20): "President's Day",
-    (2, 27): "Spring Break",
-    (2, 28): "Spring Break",
-    (3, 1): "Spring Break",
-    (3, 2): "Spring Break",
-    (3, 3): "Spring Break",
-    (3, 28): "Festival of Excellence",
+    (1, 20): "Martin Luther King Day",
+    (2, 17): "President's Day",
+    (3, 10): "Spring Break",
+    (3, 11): "Spring Break",
+    (3, 12): "Spring Break",
+    (3, 13): "Spring Break",
+    (3, 14): "Spring Break",
+    (4, 1): "Festival of Excellence",
 }
 
 # Format is ['title', 'chapter', length] for topics
 # Format is ['Exam #'] for midterm exams
 
+# Atkins 11th Edition
 Topics = [
     ["The Origins of Quantum Mechanics", "7A", 1],
     ["Wavefunctions", "7B", 1],
     ["Operators and Observables", "7C", 1],
-    ["Experiments and Interpretations in QM", "**", 1],
+    ["Special Topic: Experiments and Interpretations in QM", "**", 1],
     ["Translational Motion", "7D", 1],
     ["Vibrational Motion", "7E", 1],
     ["Rotational Motion", "7F", 1],
@@ -68,9 +69,10 @@ Topics = [
     ["Rotational Spectroscopy", "11B", 1],
     ["Vibrational Spectroscopy of Diatomic Molecules", "11C", 1],
     ["Vibrational Spectroscopy of Polyatomic Molecules", "11D", 1],
+    ["Symmetry Analysis of Vibrational Spectroscopy", "11E", 1],
     ["Electronic Spectra", "11F", 1],
     ["Decay of Excited States", "11G", 1],
-    ["Lasers and Spectroscopy Special Topics", "**", 1],
+    ["Special Topic: Lasers and Spectroscopy", "**", 1],
     # ["Catch-up/Review Day -- Midterm Exam 3 (Ch. 10--11)"],
     ["General Principles of NMR", "12A", 1],
     ["Features of NMR Spectra", "12B", 1],
